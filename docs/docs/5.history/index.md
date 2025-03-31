@@ -1,6 +1,6 @@
 ---
 title: 发布记录
-nav_order: 13
+nav_order: 6
 ---
 
 {: .note }
