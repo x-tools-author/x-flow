@@ -1,4 +1,4 @@
-﻿---
+---
 title: 集线器/分线器
 parent: 节点说明
 nav_order: 4.5
