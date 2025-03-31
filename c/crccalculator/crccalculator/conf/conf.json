@@ -1,0 +1,51 @@
+{
+    "plugin-id": "c-plugin-crc-calculator",
+    "plugin-category": "Data Processing",
+    "plugin-name": "CRC Calculator",
+    "plugin-version": "1.0.0",
+    "plugin-api-version": "1.0.0",
+    "plugin-author": "Your Name",
+    "plugin-repository": "https://github.com/x-tools-author/x-flow/tree/master/src/c/crccalculator",
+    "plugin-description": "A plugin to calculate CRC values for given data.",
+    "plugin-parameters": [
+        {
+            "name": "Text format",
+            "type": "union",
+            "default": 0,
+            "values": [
+                {
+                    "name": "ASCII",
+                    "value": 0
+                },
+                {
+                    "name": "Hex",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Algorithms",
+            "type": "enum",
+            "values": [
+                {
+                    "name": "CRC-8",
+                    "value": 0
+                },
+                {
+                    "name": "CRC-16/MODBUS",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Data",
+            "type": "string",
+            "default": ""
+        },
+        {
+            "name": "Big Endian",
+            "type": "boolean",
+            "default": true
+        }
+    ]
+}
