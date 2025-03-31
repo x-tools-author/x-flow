@@ -6,7 +6,7 @@
     "repository": "https://github.com/x-tools-author/x-flow/src/c",
     "name": "CRC Calculator",
     "description": "A simple plugin to calculate the CRC of a bytes array.",
-    "callback": "crc_calculator",
+    "callback": "crc_calculator_calculate_crc",
     "parameters": [
         {
             "name": "input",
