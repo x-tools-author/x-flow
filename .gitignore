@@ -18,3 +18,7 @@ cmake-build*
 .vs
 CMakeSettings.json
 libs
+*.dll
+*.ilk
+*.pdb
+*.exe

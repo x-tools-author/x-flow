@@ -5,13 +5,18 @@ project(
   LANGUAGES C CXX)
 
 add_compile_definitions(CRC_CALCULATOR_DLL_EXPORTS)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/crccalculator/lib)
+if(${CMAKE_BUILD_TYPE} STREQUAL "Release")
+  set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/crccalculator/lib)
+else()
+  set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/crccalculator)
+endif()
 add_library(${PROJECT_NAME} SHARED src/c_plugin_crc_calculator.h src/c_plugin_crc_calculator.c)
 target_link_libraries(${PROJECT_NAME} PUBLIC libcrc)
 
 # --------------------------------------------------------------------------------------------------
 include(GoogleTest)
 enable_testing()
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/crccalculator)
 add_executable(${PROJECT_NAME}_test
                ${CMAKE_CURRENT_SOURCE_DIR}/src/c_plugin_crc_calculator_unittest.cpp)
 target_link_libraries(${PROJECT_NAME}_test PRIVATE gtest gtest_main ${PROJECT_NAME})
