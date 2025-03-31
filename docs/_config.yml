@@ -1,12 +1,12 @@
-title: xTools 用户手册 & 开发者手册
-description: xTools 用户手册 & 开发者手册
+title: xFlow 用户手册 & 开发者手册
+description: xFlow 用户手册 & 开发者手册
 theme: just-the-docs
 
-url: https://x-tools-author.github.io/x-tools
+url: https://x-tools-author.github.io/x-flow
 
 aux_links_new_tab: true
 aux_links:
-  访问xTools项目仓库: https://github.com/x-tools-author/x-tools
+  访问xFlow项目仓库: https://github.com/x-tools-author/x-flow
 
 permalink: pretty
 
