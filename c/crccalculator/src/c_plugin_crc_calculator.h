@@ -1,5 +1,5 @@
 ﻿/***************************************************************************************************
- * Copyright 2025 x-tools-author(x-tools@outlook.com). All rights reserved.
+ * Copyright 2025-2025 x-tools-author(x-tools@outlook.com). All rights reserved.
  *
  * The file is encoded using "utf8 with bom", it is a part of xFlow project.
  *
@@ -22,17 +22,14 @@
 extern "C" {
 #endif
 
-enum crc_algorithm {
-    CRC_8,
-    CRC_16,
-    CRC_16_CCITT,
-    CRC_16_CCITT_FALSE,
-    CRC_16_DNP,
-    CRC_16_KERMIT,
-    CRC_16_MODBUS,
-    CRC_16_SICK,
-    CRC_16_XMODEM,
-    CRC_32,
+#include <stdbool.h>
+
+struct x_flow_parameters
+{
+    int format; // 0: ASCII, 1: HEX
+    const char* data;
+    int data_length;
+    bool is_big_endian;
 };
 
 /**
@@ -62,19 +59,25 @@ X_FLOW_API void x_flow_set_parameters(void* parameters,
                                       int value_length);
 
 /**
+ * * @brief Get the length of the output buffer.
+ * * @return Length of the output buffer.
+ */
+X_FLOW_API int x_flow_get_output_buffer_length();
+
+/**
  * * @brief Handle input data and generate output data.
  * * @param intput_data Pointer to the input data.(Do not free it. It will be freed by the caller.)
  * * @param input_length Length of the input data.
- * * @param output_data Pointer to the output data buffer.(You need to allocate memory for it. It will be freed by the caller.)
- * * @param output_length Pointer to the length of the output data.
+ * * @param output_data Pointer to the output data buffer, the size of the buffer is the value return by x_flow_get_output_buffer_length().
  * * @param parameters Pointer to the parameters structure, which newed by x_flow_new_parameters().
  * * @note This function processes the input data and generates the output data based on the parameters.
+ * * @return Length of the output data.
+ * * @note The output data is generated based on the input data and the parameters.
  */
-X_FLOW_API void x_flow_handle_in_data(const unsigned char* intput_data,
-                                      int input_length,
-                                      unsigned char* output_data,
-                                      int* output_length,
-                                      void* parameters);
+X_FLOW_API int x_flow_handle_in_data(const unsigned char* intput_data,
+                                     int input_length,
+                                     unsigned char* output_data,
+                                     void* parameters);
 #ifdef __cplusplus
 }
 #endif

@@ -5,13 +5,21 @@ project(
   LANGUAGES C)
 
 # --------------------------------------------------------------------------------------------------
-# crc lib
-set(lib_crc_file "libcrc-2.0")
+# crc32 lib
+set(lib_crc_file "crc32c-main")
 execute_process(COMMAND ${CMAKE_COMMAND} -E tar xzf ${lib_crc_file}.zip
                 WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/3rd)
+set(CRC32C_BUILD_BENCHMARKS
+    OFF
+    CACHE BOOL "Build benchmarks")
+set(CRC32C_BUILD_TESTS
+    OFF
+    CACHE BOOL "Build tests")
+set(CRC32C_USE_GLOG
+    OFF
+    CACHE BOOL "Use glog for logging")
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/3rd/${lib_crc_file}/include)
-file(GLOB_RECURSE crc_srcs ${CMAKE_CURRENT_SOURCE_DIR}/3rd/${lib_crc_file}/src/*.c)
-add_library(libcrc STATIC ${crc_srcs})
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/3rd/${lib_crc_file})
 
 # --------------------------------------------------------------------------------------------------
 # google test
