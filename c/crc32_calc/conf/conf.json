@@ -5,6 +5,7 @@
     "plugin-name": "CRC32 Calculator",
     "plugin-version": "1.0.0",
     "plugin-api-version": "1.0.0",
+    "plugin-lib-name": "crc32_calc",
     "plugin-author": "x-tools-author",
     "plugin-repository": "https://github.com/x-tools-author/x-flow/tree/master/src/c/crccalculator",
     "plugin-description": "A plugin to calculate CRC32 values for given data.",

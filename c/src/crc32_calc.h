@@ -36,7 +36,7 @@ struct crc32_calc_parameters
  * * @brief Parameters structure for xFlow.
  * * @note This structure is used to pass parameters to the xFlow functions.
  */
-X_FLOW_API void* crc32_calc_new_parameters();
+X_FLOW_API void* crc32_calc_malloc_parameters();
 
 /**
  * * @brief Free the parameters structure.

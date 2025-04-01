@@ -35,8 +35,10 @@ add_library(${PROJECT_NAME} SHARED src/crc32_calc.h src/crc32_calc.c)
 target_link_libraries(${PROJECT_NAME} PUBLIC crc32c)
 if(${CMAKE_BUILD_TYPE} STREQUAL "Release")
   add_custom_target(
-    ${PROJECT_NAME}_deploy COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:${PROJECT_NAME}>
-                                   ${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}/lib)
+    ${PROJECT_NAME}_deploy
+    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}/lib
+    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:${PROJECT_NAME}>
+            ${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}/lib)
 endif()
 
 # --------------------------------------------------------------------------------------------------

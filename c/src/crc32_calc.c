@@ -18,7 +18,7 @@ extern "C" {
 
 #include <crc32c/crc32c.h>
 
-X_FLOW_API void* crc32_calc_new_parameters()
+X_FLOW_API void* crc32_calc_malloc_parameters()
 {
     struct crc32_calc_parameters* parameters = (struct crc32_calc_parameters*) malloc(
         sizeof(struct crc32_calc_parameters) + sizeof(const char*) * 2);

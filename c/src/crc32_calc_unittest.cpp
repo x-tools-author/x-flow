@@ -19,7 +19,7 @@ bool test_crc32_calculator(const unsigned char *input_data,
                            bool is_big_endian,
                            uint32_t expected_crc_result)
 {
-    struct crc32_calc_parameters *params = (crc32_calc_parameters *) crc32_calc_new_parameters();
+    struct crc32_calc_parameters *params = (crc32_calc_parameters *) crc32_calc_malloc_parameters();
     if (params == NULL) {
         return false;
     }

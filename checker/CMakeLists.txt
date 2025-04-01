@@ -17,8 +17,8 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Gui Widgets Linguist
 file(GLOB_RECURSE SRC_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.*)
 list(APPEND SRC_FILES ${CMAKE_CURRENT_SOURCE_DIR}/checker.rc)
 list(APPEND SRC_FILES ${CMAKE_CURRENT_SOURCE_DIR}/checker.qrc)
-qt_add_executable(xFlowPluginChecker MANUAL_FINALIZATION ${SRC_FILES})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
-target_link_libraries(
-  xFlowPluginChecker PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Gui
-                             Qt${QT_VERSION_MAJOR}::Widgets)
+qt_add_executable(xFlowPluginChecker MANUAL_FINALIZATION ${SRC_FILES})
+target_link_libraries(xFlowPluginChecker PRIVATE Qt${QT_VERSION_MAJOR}::Core)
+target_link_libraries(xFlowPluginChecker PRIVATE Qt${QT_VERSION_MAJOR}::Gui)
+target_link_libraries(xFlowPluginChecker PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
