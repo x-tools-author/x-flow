@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 3.20)
 project(
-  c_plugin-demo
+  crc32_calc
   VERSION 1.0
   LANGUAGES C CXX)
 
@@ -40,8 +40,8 @@ if(${CMAKE_BUILD_TYPE} STREQUAL "Release")
 endif()
 
 # --------------------------------------------------------------------------------------------------
-# include(GoogleTest) include(CTest)
+# Tests
 enable_testing()
 add_executable(${PROJECT_NAME}_test ${CMAKE_CURRENT_SOURCE_DIR}/src/crc32_calc_unittest.cpp)
 target_link_libraries(${PROJECT_NAME}_test PRIVATE gtest gtest_main ${PROJECT_NAME})
-add_test(name ${PROJECT_NAME}_test COMMAND ${PROJECT_NAME}_test)
+add_test(NAME ${PROJECT_NAME}_test COMMAND ${PROJECT_NAME}_test)
