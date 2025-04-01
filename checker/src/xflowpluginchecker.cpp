@@ -144,7 +144,7 @@ bool xFlowPluginChecker::checkPluginInfo(const QString &pluginRootPath, PluginIn
 
 bool xFlowPluginChecker::checkPluginApi(const QString &pluginRootPath, PluginInfo &info)
 {
-    QString libPath = pluginRootPath + QString("/lib");
+    QString libPath = pluginRootPath + QString("/lib/");
     QDir dir(libPath);
     if (!dir.exists()) {
         outputText(tr("The directory(%1) does not exist.").arg(libPath), QtWarningMsg);
@@ -162,21 +162,21 @@ bool xFlowPluginChecker::checkPluginApi(const QString &pluginRootPath, PluginInf
         return false;
     }
 
-    outputText(tr("The path of plugin is:\"%1\".").arg(libPath), QtDebugMsg);
-    outputText(tr("The plugin file is:\"%1\".").arg(info.libName), QtDebugMsg);
+    QString libFile = libPath + libs.first();
+    outputText(tr("The lib path is: %1").arg(libFile), QtDebugMsg);
 
-    QCoreApplication::addLibraryPath(libPath);
-    QString libFile = info.libName;
     QString apiName = QString("%1_%2").arg(info.apiPrefix, QString("malloc_parameters"));
     typedef void *(*MallocParametersFunc)();
     const char *api = apiName.toLatin1().constData();
-    auto newParametersFunc = (MallocParametersFunc) QLibrary::resolve(libFile, api);
-    if (!newParametersFunc) {
-        outputText(tr("Failed to resolve the function(%1).").arg(apiName), QtWarningMsg);
+    QLibrary lib(libFile);
+    auto mallocParametersFunc = (MallocParametersFunc) lib.resolve(api);
+    if (!mallocParametersFunc) {
+        outputText(tr("Failed to resolve the function(%1):%2").arg(apiName, lib.errorString()),
+                   QtWarningMsg);
         return false;
     }
 
-    void *params = newParametersFunc();
+    void *params = mallocParametersFunc();
     if (!params) {
         outputText(tr("Failed to create the parameters."), QtWarningMsg);
         return false;
@@ -185,20 +185,21 @@ bool xFlowPluginChecker::checkPluginApi(const QString &pluginRootPath, PluginInf
     typedef void (*DeleteParameters)(void *);
     apiName = QString("%1_%2").arg(info.apiPrefix, QString("free_parameters"));
     api = apiName.toLatin1().constData();
-    auto deleteParametersFunc = (DeleteParameters) QLibrary::resolve(libFile, api);
-    if (!deleteParametersFunc) {
+    auto freeParametersFunc = (DeleteParameters) QLibrary::resolve(libFile, api);
+    if (!freeParametersFunc) {
         outputText(tr("Failed to resolve the function(%1).").arg(apiName), QtWarningMsg);
         return false;
     }
 
-    deleteParametersFunc(params);
+    freeParametersFunc(params);
     outputText(tr("The plugin(%1) is valid.").arg(info.name), QtInfoMsg);
+    return true;
 }
 
 void xFlowPluginChecker::outputText(const QString &text, int msgType = QtDebugMsg)
 {
     // QtWarningMsg: red, QtInfoMsg: green, other: black
-    QString time = QDateTime::currentDateTime().toString("hh:mm:ss");
+    QString time = QDateTime::currentDateTime().toString("hh:mm:ss.zzz");
     QString color = "black";
     if (msgType == QtWarningMsg) {
         color = "red";

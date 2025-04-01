@@ -8,6 +8,8 @@
  **************************************************************************************************/
 #pragma once
 
+#include <stdbool.h>
+
 #ifdef _MSC_VER
 #ifdef CRC32_CALC_DLL_EXPORTS
 #define X_FLOW_API __declspec(dllexport)
@@ -21,8 +23,6 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-#include <stdbool.h>
 
 struct crc32_calc_parameters
 {

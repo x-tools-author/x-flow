@@ -8,6 +8,8 @@
  **************************************************************************************************/
 #include "crc32_calc.h"
 
+#include <crc32c/crc32c.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -15,8 +17,6 @@ extern "C" {
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
-
-#include <crc32c/crc32c.h>
 
 X_FLOW_API void* crc32_calc_malloc_parameters()
 {
