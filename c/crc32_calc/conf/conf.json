@@ -1,5 +1,6 @@
 {
     "plugin-id": "c-plugin-crc32-calc",
+    "plugin-api-prefix": "crc32_calc",
     "plugin-category": "Data Processing",
     "plugin-name": "CRC32 Calculator",
     "plugin-version": "1.0.0",

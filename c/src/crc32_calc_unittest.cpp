@@ -19,27 +19,27 @@ bool test_crc32_calculator(const unsigned char *input_data,
                            bool is_big_endian,
                            uint32_t expected_crc_result)
 {
-    struct x_flow_parameters *params = (x_flow_parameters *) x_flow_new_parameters();
+    struct crc32_calc_parameters *params = (crc32_calc_parameters *) crc32_calc_new_parameters();
     if (params == NULL) {
         return false;
     }
 
     // Set parameters
     int format_ascii = 0;
-    x_flow_set_parameters(params, 0, (void *) &format_ascii, sizeof(int));
-    x_flow_set_parameters(params, 1, (void *) input_data, input_data_length);
-    x_flow_set_parameters(params, 2, (void *) &is_big_endian, sizeof(bool));
+    crc32_calc_set_parameters(params, 0, (void *) &format_ascii, sizeof(int));
+    crc32_calc_set_parameters(params, 1, (void *) input_data, input_data_length);
+    crc32_calc_set_parameters(params, 2, (void *) &is_big_endian, sizeof(bool));
 
     // Allocate output buffer
-    int output_length = x_flow_get_output_buffer_length();
+    int output_length = crc32_calc_get_output_buffer_length();
     unsigned char *output_data = (unsigned char *) malloc(output_length);
     if (output_data == NULL) {
-        x_flow_free_parameters(params);
+        crc32_calc_free_parameters(params);
         return false;
     }
 
     // Process the input data
-    int ret = x_flow_handle_in_data(input_data, input_data_length, output_data, (void *) params);
+    int ret = crc32_calc_handle_in_data(input_data, input_data_length, output_data, (void *) params);
     if (ret != input_data_length + 4) {
         free(output_data);
         return false;

@@ -30,7 +30,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/3rd/${google_test_file}/googlete
 add_subdirectory(3rd/${google_test_file})
 
 # --------------------------------------------------------------------------------------------------
-add_compile_definitions(CRC_CALCULATOR_DLL_EXPORTS)
+add_compile_definitions(CRC32_CALC_DLL_EXPORTS)
 add_library(${PROJECT_NAME} SHARED src/crc32_calc.h src/crc32_calc.c)
 target_link_libraries(${PROJECT_NAME} PUBLIC crc32c)
 if(${CMAKE_BUILD_TYPE} STREQUAL "Release")

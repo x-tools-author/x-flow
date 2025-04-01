@@ -18,10 +18,10 @@ extern "C" {
 
 #include <crc32c/crc32c.h>
 
-X_FLOW_API void* x_flow_new_parameters()
+X_FLOW_API void* crc32_calc_new_parameters()
 {
-    struct x_flow_parameters* parameters = (struct x_flow_parameters*) malloc(
-        sizeof(struct x_flow_parameters) + sizeof(const char*) * 2);
+    struct crc32_calc_parameters* parameters = (struct crc32_calc_parameters*) malloc(
+        sizeof(struct crc32_calc_parameters) + sizeof(const char*) * 2);
     if (parameters == NULL) {
         return NULL;
     }
@@ -31,26 +31,26 @@ X_FLOW_API void* x_flow_new_parameters()
     return parameters;
 }
 
-X_FLOW_API void x_flow_free_parameters(void* parameters)
+X_FLOW_API void crc32_calc_free_parameters(void* parameters)
 {
     if (parameters == NULL) {
         return;
     }
 
-    struct x_flow_parameters* params = (struct x_flow_parameters*) parameters;
+    struct crc32_calc_parameters* params = (struct crc32_calc_parameters*) parameters;
     free(params);
 }
 
-X_FLOW_API void x_flow_set_parameters(void* parameters,
-                                      int parameter_index,
-                                      void* value,
-                                      int value_length)
+X_FLOW_API void crc32_calc_set_parameters(void* parameters,
+                                          int parameter_index,
+                                          void* value,
+                                          int value_length)
 {
     if (parameters == NULL) {
         return;
     }
 
-    struct x_flow_parameters* params = (struct x_flow_parameters*) parameters;
+    struct crc32_calc_parameters* params = (struct crc32_calc_parameters*) parameters;
     switch (parameter_index) {
     case 0:
         params->format = *(int*) value;
@@ -67,22 +67,22 @@ X_FLOW_API void x_flow_set_parameters(void* parameters,
     }
 }
 
-X_FLOW_API int x_flow_get_output_buffer_length()
+X_FLOW_API int crc32_calc_get_output_buffer_length()
 {
     return 1024;
 }
 
-X_FLOW_API int x_flow_handle_in_data(const unsigned char* intput_data,
-                                     int input_length,
-                                     unsigned char* output_data,
-                                     void* parameters)
+X_FLOW_API int crc32_calc_handle_in_data(const unsigned char* intput_data,
+                                         int input_length,
+                                         unsigned char* output_data,
+                                         void* parameters)
 {
     if (parameters == NULL) {
         return 0;
     }
 
-    int output_length = x_flow_get_output_buffer_length();
-    struct x_flow_parameters* params = (struct x_flow_parameters*) parameters;
+    int output_length = crc32_calc_get_output_buffer_length();
+    struct crc32_calc_parameters* params = (struct crc32_calc_parameters*) parameters;
     bool is_big_endian = params->is_big_endian;
     memcpy_s(output_data, output_length, intput_data, input_length);
     uint32_t result = crc32c_value((const uint8_t*) intput_data, input_length);
