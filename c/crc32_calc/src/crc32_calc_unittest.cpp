@@ -11,7 +11,7 @@
 #include <string>
 
 extern "C" {
-#include "c_plugin_crc_calculator.h"
+#include "crc32_calc.h"
 }
 
 bool test_crc32_calculator(const unsigned char *input_data,

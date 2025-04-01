@@ -31,4 +31,4 @@ add_subdirectory(3rd/${google_test_file})
 
 # --------------------------------------------------------------------------------------------------
 # crc calculator
-add_subdirectory(crccalculator)
+add_subdirectory(crc32_calc)

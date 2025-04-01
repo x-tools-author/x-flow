@@ -6,7 +6,7 @@
  * xFlow is licensed according to the terms in the file LICENCE(GPL V3) in the root of the source
  * code directory.
  **************************************************************************************************/
-#include "c_plugin_crc_calculator.h"
+#include "crc32_calc.h"
 
 #ifdef __cplusplus
 extern "C" {
