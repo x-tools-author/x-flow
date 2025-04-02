@@ -1,14 +1,53 @@
 {%- comment -%}
-  Include as: {%- include_cached favicon.html -%}
-  Depends on: site.static_files.
-  Results in: HTML for a link to an existing `favicon.ico` file.
+  Include as: {%- include head.html -%}
+  Depends on: site.ga_tracking, site.ga_tracking_anonymize_ip,
+    site.search_enabled, site.static_files, site.favicon_ico.
+  Results in: HTML for the head element.
+  Includes:
+    css/activation.scss.liquid, head_custom.html.
   Overwrites:
-    file.
-
-  The endoflife.date site has 226 pages and 3410 static files. @marcwrobel pointed
-  out that the time taken by evaluating the code in this file on every page when
-  building that site was significant, and suggested making it optional. As it is
-  page-independent, it can easily be cached. Doing that reduced the time taken by
-  rendering `_includes/head.html` from 15.294s to 10.760s, thereby reducing the
-  total build time from 26.074s to 21.656s -- a saving of about 17%.
+    ga_tracking_ids, ga_property, file, favicon.
+  Should not be cached, because included files depend on page.
 {%- endcomment -%}
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
+
+  <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-head-nav.css' | relative_url }}" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  {% include css/activation.scss.liquid %}
+  </style>
+
+  {% if site.ga_tracking != nil %}
+    {% assign ga_tracking_ids = site.ga_tracking | split: "," %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_tracking_ids.first }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      {% for ga_property in ga_tracking_ids %}
+        gtag('config', '{{ ga_property }}'{% unless site.ga_tracking_anonymize_ip == nil %}, { 'anonymize_ip': true }{% endunless %});
+      {% endfor %}
+    </script>
+  {% endif %}
+
+  {% if site.search_enabled != false %}
+    <script src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
+  {% endif %}
+
+  <script src="{{ '/assets/js/just-the-docs.js' | relative_url }}"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% include_cached favicon.html %}
+
+  {% seo %}
+
+  {% include head_custom.html %}
+
+</head>
