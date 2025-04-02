@@ -25,6 +25,7 @@ target_link_libraries(xFlowPluginChecker PRIVATE Qt${QT_VERSION_MAJOR}::Gui)
 target_link_libraries(xFlowPluginChecker PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
 # --------------------------------------------------------------------------------------------------
+# Deploying the application
 if(WINDEPLOYQT_EXECUTABLE)
   add_custom_command(
     TARGET xFlowPluginChecker
