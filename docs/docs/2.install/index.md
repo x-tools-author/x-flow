@@ -7,7 +7,7 @@ nav_order: 2
 
 访问[发布页面]下载所需版本即可。
 
-[立即下载](https://github.com/x-tools-author/x-tools/releases){: .btn .btn-green }
+[立即下载](https://github.com/x-tools-author/x-flow/releases){: .btn .btn-green }
 
 {: .note }
 > “Continuous Build”是日常构建版本，包含最新的功能，也意味着包含最新的BUG
