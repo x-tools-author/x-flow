@@ -4,9 +4,9 @@ parent: 安装
 nav_order: 2.1
 ---
 
-# 从应用商店安装
+## Windows
 
 {: .note-title }
-> My note title
+> 应用商店安装
 >
-> A paragraph with a custom title callout
+> 打开微软应用商店，搜索“xFlow”，点击安装即可。

@@ -3,7 +3,7 @@ title: 安装
 nav_order: 2
 ---
 
-# 安装
+## 安装
 
 访问[发布页面]下载所需版本即可。
 
@@ -12,7 +12,7 @@ nav_order: 2
 {: .note }
 > “Continuous Build”是日常构建版本，包含最新的功能，也意味着包含最新的BUG
 
-## 如何选择文件
+### 如何选择文件
 
 发布文件格式为：*xtools-[系统]-[版本]-[处理器框架].[后缀]*，例如*xtools-windows-v2025.3.6-amd64.zip*指的是软件包是于2025年3月6日构建的适用于64位windows平台。
 
@@ -34,9 +34,4 @@ nav_order: 2
 >
 > deb包是基于ubuntu-20.04构建的，使用于ubuntu 20.04或更新版本系统
 
-{: .important-title }
-> 关于apk包
->
-> 安卓包未经测试，只是按原样提供
-
-[发布页面]: https://github.com/x-tools-author/x-tools/releases
+[发布页面]: https://github.com/x-tools-author/x-flow/releases
