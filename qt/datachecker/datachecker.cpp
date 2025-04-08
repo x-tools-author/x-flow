@@ -48,7 +48,10 @@ QByteArray DataChecker::inPortTypes(int index) const
     return QByteArray("QByteArray");
 }
 
-QByteArray DataChecker::outPortTypes(int index) const { return QByteArray("QByteArray"); }
+QByteArray DataChecker::outPortTypes(int index) const
+{
+    return QByteArray("QByteArray");
+}
 
 bool DataChecker::inputBytes(const QByteArray& bytes, int index)
 {
@@ -85,4 +88,4 @@ QString DataChecker::repository() const
     return QString("");
 }
 
-void DataChecker::translateUi(const QString& flag) { }
+void DataChecker::translateUi(const QString& flag) {}
