@@ -13,7 +13,8 @@
 #include <QString>
 #include <QWidget>
 
-class XFlowPluginInterface {
+class XFlowPluginInterface
+{
 public:
     virtual QString pluginApiVersion() const = 0;
 
@@ -34,10 +35,10 @@ public:
     virtual QString description() const { return QString(""); }
     virtual QString author() const { return QString(""); }
     virtual QString repository() const { return QString(""); }
-    virtual void translateUi(const QString& flag) { }
+    virtual void translateUi(const QString& flag) {}
 };
 
 QT_BEGIN_NAMESPACE
-#define XFlowPluginInterface_iid "xtools.xflow.plugin"
+#define XFlowPluginInterface_iid "xtools.xflow.XFlowPluginInterface"
 Q_DECLARE_INTERFACE(XFlowPluginInterface, XFlowPluginInterface_iid)
 QT_END_NAMESPACE

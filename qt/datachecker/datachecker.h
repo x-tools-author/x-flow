@@ -8,13 +8,15 @@
  **************************************************************************************************/
 #pragma once
 
+#include <QObject>
 #include <QtPlugin>
 
 #include "xflowplugininterface.h"
 
-class DataChecker : public QObject, XFlowPluginInterface {
+class DataChecker : public QObject, XFlowPluginInterface
+{
     Q_OBJECT
-    Q_PLUGIN_METADATA(IID "xtools.xflow.plugin" FILE "datachecker.json")
+    Q_PLUGIN_METADATA(IID "xtools.xflow.XFlowPluginInterface" FILE "datachecker.json")
     Q_INTERFACES(XFlowPluginInterface)
 public:
     QString pluginApiVersion() const override;
