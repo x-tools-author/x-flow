@@ -13,6 +13,18 @@ nav_order: 5
 
 ## 配置文件
 
+插件目录下必须包含一个`conf`和`lib`目录，`conf`目录下必须包含一个`conf.json`文件；`lib`目录下必须包含一个库文件或者脚本文件。
+
+以crc32计算器插件为例，其目录结构如下：
+
+```txt
+.crc32_calc
+├── conf
+│    └── conf.json
+└── lib
+     └── crc32_calc.dll
+```
+
 ### 配置文件示例
 
 ```json
