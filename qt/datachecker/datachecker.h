@@ -13,11 +13,19 @@
 
 #include "xflowplugininterface.h"
 
+namespace Ui {
+class DataChecker;
+}
+
 class DataChecker : public QObject, XFlowPluginInterface
 {
     Q_OBJECT
-    Q_PLUGIN_METADATA(IID "xtools.xflow.XFlowPluginInterface" FILE "datachecker.json")
+    Q_PLUGIN_METADATA(IID XFlowPluginInterface_iid FILE "datachecker.json")
     Q_INTERFACES(XFlowPluginInterface)
+public:
+    DataChecker(QObject* parent = nullptr);
+    ~DataChecker() override;
+
 public:
     QString pluginApiVersion() const override;
 
@@ -37,5 +45,16 @@ public:
     QString description() const override;
     QString author() const override;
     QString repository() const override;
-    void translateUi(const QString& flag) override;
+    void setLanguage(const QString& flag) override;
+
+    QJsonObject save() const override;
+    void load(const QJsonObject& parameters) override;
+
+private:
+    QString getText(const QString& str) const;
+
+private:
+    Ui::DataChecker* ui;
+    QWidget* m_widget;
+    QString m_languageFlag;
 };

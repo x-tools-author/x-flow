@@ -35,7 +35,10 @@ public:
     virtual QString description() const { return QString(""); }
     virtual QString author() const { return QString(""); }
     virtual QString repository() const { return QString(""); }
-    virtual void translateUi(const QString& flag) {}
+    virtual void setLanguage(const QString& flag) {}
+
+    virtual QJsonObject save() const { return QJsonObject(); }
+    virtual void load(const QJsonObject& parameters) { Q_UNUSED(parameters); }
 };
 
 QT_BEGIN_NAMESPACE
