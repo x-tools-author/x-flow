@@ -13,7 +13,7 @@
 #include <QString>
 #include <QWidget>
 
-class XFlowPluginInterface
+class XFlowPluginInterfaceV1
 {
 public:
     virtual QString pluginApiVersion() const = 0;
@@ -42,6 +42,6 @@ public:
 };
 
 QT_BEGIN_NAMESPACE
-#define XFlowPluginInterface_iid "xtools.xflow.XFlowPluginInterface"
-Q_DECLARE_INTERFACE(XFlowPluginInterface, XFlowPluginInterface_iid)
+#define XFlowPluginInterfaceV1_iid "xtools.xflow.XFlowPluginInterfaceV1"
+Q_DECLARE_INTERFACE(XFlowPluginInterfaceV1, XFlowPluginInterfaceV1_iid)
 QT_END_NAMESPACE

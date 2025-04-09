@@ -11,17 +11,17 @@
 #include <QObject>
 #include <QtPlugin>
 
-#include "xflowplugininterface.h"
+#include "xflowplugininterfacev1.h"
 
 namespace Ui {
 class DataChecker;
 }
 
-class DataChecker : public QObject, XFlowPluginInterface
+class DataChecker : public QObject, XFlowPluginInterfaceV1
 {
     Q_OBJECT
-    Q_PLUGIN_METADATA(IID XFlowPluginInterface_iid FILE "datachecker.json")
-    Q_INTERFACES(XFlowPluginInterface)
+    Q_PLUGIN_METADATA(IID XFlowPluginInterfaceV1_iid FILE "datachecker.json")
+    Q_INTERFACES(XFlowPluginInterfaceV1)
 public:
     DataChecker(QObject* parent = nullptr);
     ~DataChecker() override;
