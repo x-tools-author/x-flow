@@ -7,3 +7,5 @@ project(
   xFlow
   VERSION 1.0
   LANGUAGES C CXX)
+
+add_subdirectory(qt)
