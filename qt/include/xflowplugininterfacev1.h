@@ -18,7 +18,7 @@ class XFlowPluginInterfaceV1
 public:
     virtual QString pluginApiVersion() const = 0;
 
-    virtual QString category() const = 0;
+    virtual QString caption() const = 0;
     virtual QString name() const = 0;
     virtual int inPorts() const = 0;
     virtual int outPorts() const = 0;

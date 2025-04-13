@@ -29,7 +29,7 @@ public:
 public:
     QString pluginApiVersion() const override;
 
-    QString category() const override;
+    QString caption() const override;
     QString name() const override;
     int inPorts() const override;
     int outPorts() const override;

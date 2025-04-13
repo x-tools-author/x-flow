@@ -13,7 +13,9 @@ DataChecker::DataChecker(QObject* parent)
     : QObject(parent)
     , ui(nullptr)
     , m_widget(nullptr)
-{}
+{
+    setObjectName(QString("x-flow-plugin-v1.0"));
+}
 
 DataChecker::~DataChecker()
 {
@@ -27,7 +29,7 @@ QString DataChecker::pluginApiVersion() const
     return QString("1.0");
 }
 
-QString DataChecker::category() const
+QString DataChecker::caption() const
 {
     return getText(QString("Data Checker"));
 }
