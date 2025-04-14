@@ -27,7 +27,7 @@ public:
 
     virtual QJsonObject save(QWidget *ui) const { return QJsonObject(); }
     virtual void load(const QJsonObject &parameters, QWidget *ui) { Q_UNUSED(parameters); }
-    virtual void setlanguage(const QString &language) { Q_UNUSED(language); }
+    virtual void setLanguage(const QString &language) { Q_UNUSED(language); }
 };
 
 QT_BEGIN_NAMESPACE

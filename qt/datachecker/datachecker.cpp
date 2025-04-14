@@ -91,7 +91,7 @@ void DataChecker::load(const QJsonObject& parameters, QWidget* ui)
     }
 }
 
-void DataChecker::setlanguage(const QString& language)
+void DataChecker::setLanguage(const QString& language)
 {
     m_language = language;
 }

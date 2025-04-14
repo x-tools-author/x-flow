@@ -38,7 +38,7 @@ public:
 
     QJsonObject save(QWidget* ui) const override;
     void load(const QJsonObject& parameters, QWidget* ui) override;
-    void setlanguage(const QString& language) override;
+    void setLanguage(const QString& language) override;
 
 private:
     static QString m_language;
