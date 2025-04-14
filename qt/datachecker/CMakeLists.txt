@@ -2,7 +2,15 @@ set(qt_components Core Gui Widgets)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS ${qt_components})
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS ${qt_components})
 
-qt_add_plugin(datachecker CLASS_NAME DataChecker datachecker.cpp datachecker.h datachecker.ui)
+qt_add_plugin(
+  datachecker
+  CLASS_NAME
+  DataChecker
+  datachecker.cpp
+  datachecker.h
+  datacheckerui.cpp
+  datacheckerui.h
+  datacheckerui.ui)
 
 set_target_properties(datachecker PROPERTIES LIBRARY_OUTPUT_DIRECTORY
                                              ${X_FLOW_PLUGIN_OUTPUT_DIRECTORY})

@@ -7,21 +7,13 @@
  * code directory.
  **************************************************************************************************/
 #include "datachecker.h"
-#include "ui_datachecker.h"
+#include "datacheckerui.h"
 
 DataChecker::DataChecker(QObject* parent)
     : QObject(parent)
-    , ui(nullptr)
-    , m_widget(nullptr)
 {}
 
-DataChecker::~DataChecker()
-{
-    if (ui) {
-        delete ui;
-        ui = nullptr;
-    }
-}
+DataChecker::~DataChecker() {}
 
 QString DataChecker::pluginApiVersion() const
 {
@@ -30,7 +22,7 @@ QString DataChecker::pluginApiVersion() const
 
 QString DataChecker::caption() const
 {
-    return getText(QString("Data Checker"));
+    return QString("Data Checker");
 }
 
 QString DataChecker::name() const
@@ -48,22 +40,17 @@ int DataChecker::outPorts() const
     return 0;
 }
 
-QByteArray DataChecker::handleData(QByteArray const& bytes, int const index)
+QByteArray DataChecker::handleData(QByteArray const& bytes, int const index, QWidget* ui)
 {
-    qDebug() << "DataChecker::handleData" << bytes.toHex(' ') << index << ui;
-    if (ui) {
-        QString str = ui->lineEdit->text().trimmed();
-        if (str.isEmpty()) {
-            str = ui->lineEdit->placeholderText().trimmed();
-        }
-        QString reference = str.toUpper();
+    DataCheckerUi* dataCheckerUi = qobject_cast<DataCheckerUi*>(ui);
+    if (dataCheckerUi) {
+        QString reference = dataCheckerUi->referenceText();
         QString input = QString(bytes.toHex(' ').toUpper());
-        qInfo() << "DataChecker::handleData" << reference << input;
 
         if (input == reference) {
-            ui->labelStatus->setText(QString("OK"));
+            dataCheckerUi->setResultText(QString("OK"));
         } else {
-            ui->labelStatus->setText(QString("NG"));
+            dataCheckerUi->setResultText(QString("NG"));
         }
     }
 
@@ -72,13 +59,7 @@ QByteArray DataChecker::handleData(QByteArray const& bytes, int const index)
 
 QWidget* DataChecker::widget()
 {
-    if (m_widget == nullptr) {
-        m_widget = new QWidget();
-        ui = new Ui::DataChecker;
-        ui->setupUi(m_widget);
-    }
-
-    return m_widget;
+    return new DataCheckerUi();
 }
 
 QString DataChecker::version() const
@@ -101,63 +82,24 @@ QString DataChecker::repository() const
     return QString("https://github.com/x-tools-author/x-flow");
 }
 
-void DataChecker::setLanguage(const QString& flag)
-{
-    m_languageFlag = flag;
-    if (ui == nullptr) {
-        return;
-    }
-
-    ui->labelReference->setText(getText("Reference data"));
-    ui->labelResult->setText(getText("Checking result"));
-}
-
-QJsonObject DataChecker::save() const
+QJsonObject DataChecker::save(QWidget* ui) const
 {
     QJsonObject jsonObj;
 
-    if (ui) {
-        jsonObj["reference"] = ui->lineEdit->text().trimmed();
-    } else {
-        jsonObj["reference"] = QString("28 6E 75 6C 6C 29");
+    DataCheckerUi* dataCheckerUi = qobject_cast<DataCheckerUi*>(ui);
+    if (dataCheckerUi) {
+        jsonObj.insert("reference", dataCheckerUi->referenceText());
     }
 
     return jsonObj;
 }
 
-void DataChecker::load(const QJsonObject& parameters)
+void DataChecker::load(const QJsonObject& parameters, QWidget* ui)
 {
-    if (ui) {
-        QString str = parameters.value("reference").toString(QString("28 6E 75 6C 6C 29"));
-        ui->lineEdit->setText(str.trimmed());
+    DataCheckerUi* dataCheckerUi = qobject_cast<DataCheckerUi*>(ui);
+    if (dataCheckerUi) {
+        QString defaultReference = QString("28 6E 75 6C 6C 29");
+        QString reference = parameters.value("reference").toString(defaultReference);
+        dataCheckerUi->setReferenceText(reference.trimmed());
     }
-}
-
-QString DataChecker::getText(const QString& str) const
-{
-    if (str == QString("Data Checker")) {
-        if (m_languageFlag == QString("en")) {
-            return QString("Data Checker");
-        } else if (m_languageFlag == QString("zh_CN")) {
-            return QString("数据校验器");
-        }
-    }
-
-    if (str == QString("Reference data")) {
-        if (m_languageFlag == QString("en")) {
-            return QString("Reference data");
-        } else if (m_languageFlag == QString("zh_CN")) {
-            return QString("参考数据");
-        }
-    }
-
-    if (str == QString("Checking result")) {
-        if (m_languageFlag == QString("en")) {
-            return QString("Checking result");
-        } else if (m_languageFlag == QString("zh_CN")) {
-            return QString("校验结果");
-        }
-    }
-
-    return str;
 }

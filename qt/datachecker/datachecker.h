@@ -34,22 +34,13 @@ public:
     int inPorts() const override;
     int outPorts() const override;
     QWidget* widget() override;
-    QByteArray handleData(QByteArray const& bytes, int const index) override;
+    QByteArray handleData(QByteArray const& bytes, int const index, QWidget* ui) override;
 
     QString version() const override;
     QString description() const override;
     QString author() const override;
     QString repository() const override;
-    void setLanguage(const QString& flag) override;
 
-    QJsonObject save() const override;
-    void load(const QJsonObject& parameters) override;
-
-private:
-    QString getText(const QString& str) const;
-
-private:
-    Ui::DataChecker* ui;
-    QWidget* m_widget;
-    QString m_languageFlag;
+    QJsonObject save(QWidget* ui) const override;
+    void load(const QJsonObject& parameters, QWidget* ui) override;
 };
