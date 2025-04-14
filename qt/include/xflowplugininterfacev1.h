@@ -16,7 +16,6 @@
 class XFlowPluginInterfaceV1
 {
 public:
-    ;
     virtual QString pluginApiVersion() const = 0;
 
     virtual QString caption() const = 0;
