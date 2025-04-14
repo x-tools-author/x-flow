@@ -33,13 +33,8 @@ public:
     QString name() const override;
     int inPorts() const override;
     int outPorts() const override;
-    QString inPortNames(int index) const override;
-    QString outPortNames(int index) const override;
-    QByteArray inPortTypes(int index) const override;
-    QByteArray outPortTypes(int index) const override;
-    bool inputBytes(const QByteArray& bytes, int index) override;
-    QByteArray outputBytes(int index) const override;
     QWidget* widget() override;
+    QByteArray handleData(QByteArray const& bytes, int const index) override;
 
     QString version() const override;
     QString description() const override;

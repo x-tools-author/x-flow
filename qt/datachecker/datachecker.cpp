@@ -13,14 +13,13 @@ DataChecker::DataChecker(QObject* parent)
     : QObject(parent)
     , ui(nullptr)
     , m_widget(nullptr)
-{
-    setObjectName(QString("x-flow-plugin-v1.0"));
-}
+{}
 
 DataChecker::~DataChecker()
 {
     if (ui) {
         delete ui;
+        ui = nullptr;
     }
 }
 
@@ -49,32 +48,17 @@ int DataChecker::outPorts() const
     return 0;
 }
 
-QString DataChecker::inPortNames(int index) const
+QByteArray DataChecker::handleData(QByteArray const& bytes, int const index)
 {
-    return QString("[In]");
-}
-
-QString DataChecker::outPortNames(int index) const
-{
-    return QString("[Out]");
-}
-
-QByteArray DataChecker::inPortTypes(int index) const
-{
-    return QByteArray("QByteArray");
-}
-
-QByteArray DataChecker::outPortTypes(int index) const
-{
-    return QByteArray("QByteArray");
-}
-
-bool DataChecker::inputBytes(const QByteArray& bytes, int index)
-{
+    qDebug() << "DataChecker::handleData" << bytes.toHex(' ') << index << ui;
     if (ui) {
         QString str = ui->lineEdit->text().trimmed();
-        QByteArray reference = str.toUtf8().toHex().toUpper();
-        QByteArray input = bytes.toHex().toUpper();
+        if (str.isEmpty()) {
+            str = ui->lineEdit->placeholderText().trimmed();
+        }
+        QString reference = str.toUpper();
+        QString input = QString(bytes.toHex(' ').toUpper());
+        qInfo() << "DataChecker::handleData" << reference << input;
 
         if (input == reference) {
             ui->labelStatus->setText(QString("OK"));
@@ -83,12 +67,7 @@ bool DataChecker::inputBytes(const QByteArray& bytes, int index)
         }
     }
 
-    return false;
-}
-
-QByteArray DataChecker::outputBytes(int index) const
-{
-    return QByteArray("");
+    return QByteArray();
 }
 
 QWidget* DataChecker::widget()

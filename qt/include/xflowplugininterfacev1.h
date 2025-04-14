@@ -22,23 +22,18 @@ public:
     virtual QString name() const = 0;
     virtual int inPorts() const = 0;
     virtual int outPorts() const = 0;
-    virtual QString inPortNames(int index) const = 0;
-    virtual QString outPortNames(int index) const = 0;
-    virtual QByteArray inPortTypes(int index) const = 0;
-    virtual QByteArray outPortTypes(int index) const = 0;
-    virtual bool inputBytes(const QByteArray& bytes, int index) = 0;
-    virtual QByteArray outputBytes(int index) const = 0;
-    virtual QWidget* widget() = 0;
+    virtual QWidget *widget() = 0;
+    virtual QByteArray handleData(QByteArray const &data, int const index) = 0;
 
     // Optional: This function is used to get the plugin version.
     virtual QString version() const { return QString(""); }
     virtual QString description() const { return QString(""); }
     virtual QString author() const { return QString(""); }
     virtual QString repository() const { return QString(""); }
-    virtual void setLanguage(const QString& flag) {}
+    virtual void setLanguage(const QString &flag) {}
 
     virtual QJsonObject save() const { return QJsonObject(); }
-    virtual void load(const QJsonObject& parameters) { Q_UNUSED(parameters); }
+    virtual void load(const QJsonObject &parameters) { Q_UNUSED(parameters); }
 };
 
 QT_BEGIN_NAMESPACE
