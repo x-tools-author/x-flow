@@ -37,3 +37,14 @@ void DataCheckerUi::setResultText(const QString& text)
 {
     ui->labelStatus->setText(text);
 }
+
+void DataCheckerUi::updateLanguage(const QString& language)
+{
+    if (language == "zh_CN") {
+        ui->labelReference->setText(QString("参考数据"));
+        ui->labelResult->setText(QString("校验结果"));
+    } else {
+        ui->labelReference->setText(QString("Reference data"));
+        ui->labelResult->setText(QString("Checking result"));
+    }
+}

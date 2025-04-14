@@ -9,6 +9,7 @@
 #include "datachecker.h"
 #include "datacheckerui.h"
 
+QString DataChecker::m_language;
 DataChecker::DataChecker(QObject* parent)
     : QObject(parent)
 {}
@@ -22,6 +23,10 @@ QString DataChecker::pluginApiVersion() const
 
 QString DataChecker::caption() const
 {
+    if (m_language == "zh_CN") {
+        return QString("数据校验器");
+    }
+
     return QString("Data Checker");
 }
 
@@ -59,7 +64,9 @@ QByteArray DataChecker::handleData(QByteArray const& bytes, int const index, QWi
 
 QWidget* DataChecker::newWidget()
 {
-    return new DataCheckerUi();
+    DataCheckerUi* ui = new DataCheckerUi();
+    ui->updateLanguage(m_language);
+    return ui;
 }
 
 QJsonObject DataChecker::save(QWidget* ui) const
@@ -82,4 +89,9 @@ void DataChecker::load(const QJsonObject& parameters, QWidget* ui)
         QString reference = parameters.value("reference").toString(defaultReference);
         dataCheckerUi->setReferenceText(reference.trimmed());
     }
+}
+
+void DataChecker::setlanguage(const QString& language)
+{
+    m_language = language;
 }

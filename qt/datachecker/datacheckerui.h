@@ -24,6 +24,7 @@ public:
     QString referenceText();
     void setReferenceText(const QString& text);
     void setResultText(const QString& text);
+    void updateLanguage(const QString& language);
 
 private:
     Ui::DataCheckerUi* ui;
