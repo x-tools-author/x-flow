@@ -14,7 +14,7 @@ extern "C" {
 #include "crc32_calc.h"
 }
 
-bool test_crc32_calculator(const unsigned char *input_data,
+bool test_crc32_calculator(const char *input_data,
                            int input_data_length,
                            uint32_t expected_crc_result)
 {
@@ -43,14 +43,14 @@ TEST(CrcCalculator, CRC32_00)
 {
     uint8_t buf[32];
     std::memset(buf, 0, sizeof(buf));
-    EXPECT_EQ(true, test_crc32_calculator(buf, sizeof(buf), 0xaa36918a));
+    EXPECT_EQ(true, test_crc32_calculator((const char *) buf, sizeof(buf), 0xaa36918a));
 }
 
 TEST(CrcCalculator, CRC32_ff)
 {
     uint8_t buf[32];
     std::memset(buf, 0xff, sizeof(buf));
-    EXPECT_EQ(true, test_crc32_calculator(buf, sizeof(buf), 0x43aba862));
+    EXPECT_EQ(true, test_crc32_calculator((const char *) buf, sizeof(buf), 0x43aba862));
 }
 
 TEST(CrcCalculator, CRC32_00_32)
@@ -60,7 +60,7 @@ TEST(CrcCalculator, CRC32_00_32)
         buf[i] = static_cast<uint8_t>(i);
     }
 
-    EXPECT_EQ(true, test_crc32_calculator(buf, sizeof(buf), 0x4e79dd46));
+    EXPECT_EQ(true, test_crc32_calculator((const char *) buf, sizeof(buf), 0x4e79dd46));
 }
 
 TEST(CrcCalculator, CRC32_32_00)
@@ -70,7 +70,7 @@ TEST(CrcCalculator, CRC32_32_00)
         buf[i] = static_cast<uint8_t>(31 - i);
     }
 
-    EXPECT_EQ(true, test_crc32_calculator(buf, sizeof(buf), 0x5cdb3f11));
+    EXPECT_EQ(true, test_crc32_calculator((const char *) buf, sizeof(buf), 0x5cdb3f11));
 }
 
 TEST(CrcCalculator, CRC32)
@@ -82,5 +82,5 @@ TEST(CrcCalculator, CRC32)
         0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     };
 
-    EXPECT_EQ(true, test_crc32_calculator(buf, sizeof(buf), 0x563a96d9));
+    EXPECT_EQ(true, test_crc32_calculator((const char *) buf, sizeof(buf), 0x563a96d9));
 }

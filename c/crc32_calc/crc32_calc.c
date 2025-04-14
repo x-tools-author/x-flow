@@ -26,7 +26,7 @@ X_FLOW_API const char* x_flow_plugin_get_api_version()
 
 X_FLOW_API const char* x_flow_plugin_get_caption()
 {
-    static const char* caption = "CRC32C Calculation";
+    static const char* caption = "CRC32 Calculator";
     return caption;
 }
 
@@ -46,7 +46,7 @@ X_FLOW_API int x_flow_plugin_get_out_ports()
     return 1;
 }
 
-X_FLOW_API int x_flow_plugin_handle_data(const unsigned char* intput_data,
+X_FLOW_API int x_flow_plugin_handle_data(const char* intput_data,
                                          int input_length,
                                          unsigned char* output_data,
                                          int output_data_length)
