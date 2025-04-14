@@ -8,4 +8,5 @@ project(
   VERSION 1.0
   LANGUAGES C CXX)
 
+add_subdirectory(c)
 add_subdirectory(qt)

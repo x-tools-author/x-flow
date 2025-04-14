@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 # cmake-format: off
-project(xFlowQtPlugin VERSION 1.0 LANGUAGES C CXX)
+project(xFlowQtPlugins VERSION 1.0 LANGUAGES C CXX)
 # cmake-format: on
 
 set(CMAKE_AUTOUIC ON)

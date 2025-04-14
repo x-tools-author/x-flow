@@ -1,6 +1,6 @@
-﻿cmake_minimum_required(VERSION 3.20)
+﻿cmake_minimum_required(VERSION 3.16)
 project(
-  crc32_calc
+  xFlowCPlugins
   VERSION 1.0
   LANGUAGES C CXX)
 
@@ -30,20 +30,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/3rd/${google_test_file}/googlete
 add_subdirectory(3rd/${google_test_file})
 
 # --------------------------------------------------------------------------------------------------
-add_compile_definitions(CRC32_CALC_DLL_EXPORTS)
-add_library(${PROJECT_NAME} SHARED src/crc32_calc.h src/crc32_calc.c)
-target_link_libraries(${PROJECT_NAME} PUBLIC crc32c)
-if(${CMAKE_BUILD_TYPE} STREQUAL "Release")
-  add_custom_target(
-    ${PROJECT_NAME}_deploy
-    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}/lib
-    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:${PROJECT_NAME}>
-            ${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}/lib)
-endif()
-
-# --------------------------------------------------------------------------------------------------
-# Tests
+add_compile_definitions(X_FLOW_DLL_EXPORTS)
+set(X_FLOW_PLUGIN_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/plugins)
 enable_testing()
-add_executable(${PROJECT_NAME}_test ${CMAKE_CURRENT_SOURCE_DIR}/src/crc32_calc_unittest.cpp)
-target_link_libraries(${PROJECT_NAME}_test PRIVATE gtest gtest_main ${PROJECT_NAME})
-add_test(NAME ${PROJECT_NAME}_test COMMAND ${PROJECT_NAME}_test)
+
+include(crc32_calc/crc32_calc.cmake)
