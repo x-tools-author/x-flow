@@ -27,7 +27,7 @@ QString DataChecker::caption() const
 
 QString DataChecker::name() const
 {
-    return QString("DataChecker");
+    return QString("xtools.xflow.plugin.datachecker");
 }
 
 int DataChecker::inPorts() const
@@ -57,29 +57,9 @@ QByteArray DataChecker::handleData(QByteArray const& bytes, int const index, QWi
     return QByteArray();
 }
 
-QWidget* DataChecker::widget()
+QWidget* DataChecker::newWidget()
 {
     return new DataCheckerUi();
-}
-
-QString DataChecker::version() const
-{
-    return QString("1.0.0");
-}
-
-QString DataChecker::description() const
-{
-    return QString("Data Checker Plugin for xFlow.");
-}
-
-QString DataChecker::author() const
-{
-    return QString("x-tools-author");
-}
-
-QString DataChecker::repository() const
-{
-    return QString("https://github.com/x-tools-author/x-flow");
 }
 
 QJsonObject DataChecker::save(QWidget* ui) const

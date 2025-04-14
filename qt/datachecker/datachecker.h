@@ -33,13 +33,8 @@ public:
     QString name() const override;
     int inPorts() const override;
     int outPorts() const override;
-    QWidget* widget() override;
+    QWidget* newWidget() override;
     QByteArray handleData(QByteArray const& bytes, int const index, QWidget* ui) override;
-
-    QString version() const override;
-    QString description() const override;
-    QString author() const override;
-    QString repository() const override;
 
     QJsonObject save(QWidget* ui) const override;
     void load(const QJsonObject& parameters, QWidget* ui) override;

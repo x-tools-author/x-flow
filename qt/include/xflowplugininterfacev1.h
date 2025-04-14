@@ -22,15 +22,8 @@ public:
     virtual QString name() const = 0;
     virtual int inPorts() const = 0;
     virtual int outPorts() const = 0;
-    virtual QWidget *widget() = 0;
+    virtual QWidget *newWidget() = 0;
     virtual QByteArray handleData(QByteArray const &data, int const index, QWidget *ui) = 0;
-
-    // Optional: This function is used to get the plugin version.
-    virtual QString version() const { return QString(""); }
-    virtual QString description() const { return QString(""); }
-    virtual QString author() const { return QString(""); }
-    virtual QString repository() const { return QString(""); }
-    virtual void setLanguage(const QString &flag, QWidget *ui) {}
 
     virtual QJsonObject save(QWidget *ui) const { return QJsonObject(); }
     virtual void load(const QJsonObject &parameters, QWidget *ui) { Q_UNUSED(parameters); }
