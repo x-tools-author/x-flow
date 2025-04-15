@@ -18,6 +18,6 @@ export function x_flow_plugin_get_out_ports() {
     return 1;
 }
 
-export function x_flow_plugin_handle_data(str) {
+export function x_flow_plugin_handle_data(str, index) {
     return str;
 }
