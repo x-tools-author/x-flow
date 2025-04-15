@@ -1,0 +1,23 @@
+﻿export function x_flow_plugin_get_api_version() {
+    return "1.0";
+}
+
+export function x_flow_plugin_get_caption() {
+    return "Bypass";
+}
+
+export function x_flow_plugin_get_name() {
+    return "xtools.xflow.plugin.bypass.js";
+}
+
+export function x_flow_plugin_get_in_ports() {
+    return 1;
+}
+
+export function x_flow_plugin_get_out_ports() {
+    return 1;
+}
+
+export function x_flow_plugin_handle_data(str) {
+    return str;
+}
