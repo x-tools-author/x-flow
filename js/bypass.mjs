@@ -3,7 +3,7 @@
 }
 
 export function x_flow_plugin_get_caption() {
-    return "Bypass";
+    return "Bypass(js)";
 }
 
 export function x_flow_plugin_get_name() {
