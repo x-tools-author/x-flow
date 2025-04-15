@@ -3,11 +3,11 @@
 end
 
 local function x_flow_plugin_get_caption()
-    return "Do Nothing";
+    return "Bypass(lua)";
 end
 
 local function x_flow_plugin_get_name()
-    return "Do Nothing";
+    return "xtools.xflow.plugin.bypass.lua";
 end
 
 local function x_flow_plugin_get_in_ports()
