@@ -1,23 +1,23 @@
-﻿local function x_flow_plugin_get_api_version()
+﻿function X_flow_plugin_get_api_version()
     return "1.0";
 end
 
-local function x_flow_plugin_get_caption()
+function X_flow_plugin_get_caption()
     return "Bypass(lua)";
 end
 
-local function x_flow_plugin_get_name()
+function X_flow_plugin_get_name()
     return "xtools.xflow.plugin.bypass.lua";
 end
 
-local function x_flow_plugin_get_in_ports()
+function X_flow_plugin_get_in_ports()
     return 1;
 end
 
-local function x_flow_plugin_get_out_ports()
+function X_flow_plugin_get_out_ports()
     return 1;
 end
 
-local function x_flow_plugin_handle_data(str)
+function X_flow_plugin_handle_data(str, index)
     return str;
 end
