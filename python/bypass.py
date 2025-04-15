@@ -3,11 +3,11 @@
 
 
 def x_flow_plugin_get_caption():
-    return "Bypass(js)"
+    return "Bypass(py)"
 
 
 def x_flow_plugin_get_name():
-    return "xtools.xflow.plugin.bypass.js"
+    return "xtools.xflow.plugin.bypass.py"
 
 
 def x_flow_plugin_get_in_ports():
@@ -18,5 +18,5 @@ def x_flow_plugin_get_out_ports():
     return 1
 
 
-def x_flow_plugin_handle_data(str: str, index: int):
-    return str
+def x_flow_plugin_handle_data(data: bytes, index: int):
+    return data
