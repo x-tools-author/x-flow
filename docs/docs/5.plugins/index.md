@@ -3,7 +3,7 @@ title: 插件开发
 nav_order: 5
 ---
 
-## 插件开发
+## 插件开发(v1.0)
 
 {: .important-title }
 > 特别声明
