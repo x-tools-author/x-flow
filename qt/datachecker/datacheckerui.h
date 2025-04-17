@@ -28,4 +28,6 @@ public:
 
 private:
     Ui::DataCheckerUi* ui;
+
+    Q_SIGNAL void setResultTextThreadSafe(const QString& text);
 };

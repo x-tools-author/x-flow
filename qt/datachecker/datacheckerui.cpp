@@ -14,6 +14,9 @@ DataCheckerUi::DataCheckerUi(QWidget* parent)
     , ui(new Ui::DataCheckerUi)
 {
     ui->setupUi(this);
+    connect(this, &DataCheckerUi::setResultTextThreadSafe, this, [this](const QString& text) {
+        ui->labelResult->setText(text);
+    });
 }
 
 DataCheckerUi::~DataCheckerUi() {}
@@ -35,7 +38,7 @@ void DataCheckerUi::setReferenceText(const QString& text)
 
 void DataCheckerUi::setResultText(const QString& text)
 {
-    ui->labelStatus->setText(text);
+    emit setResultTextThreadSafe(text);
 }
 
 void DataCheckerUi::updateLanguage(const QString& language)
