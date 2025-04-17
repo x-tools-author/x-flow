@@ -17,8 +17,5 @@ list(APPEND data_checker_libs Qt${QT_VERSION_MAJOR}::Gui)
 list(APPEND data_checker_libs Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(datachecker PRIVATE ${data_checker_libs})
 
-# cmake-format: off
+# --------------------------------------------------------------------------------------------------
 qt_standard_project_setup()
-set(install_dir "${CMAKE_BINARY_DIR}/plugins/datachecker")
-install(TARGETS datachecker RUNTIME DESTINATION "${install_dir}" LIBRARY DESTINATION "${install_dir}")
-# cmake-format: on
