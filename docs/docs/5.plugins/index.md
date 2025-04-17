@@ -15,5 +15,5 @@ nav_order: 5
 - `c`：基于C语言的插件，对应的文件后缀为`.so`或`.dll`
 - `qt`：基于Qt的插件，对应的文件后缀为`.so`或`.dll`
 - `lua`：基于Lua的插件，对应的文件后缀为`.lua`
-- `python`：基于Python的插件，对应的文件后缀为`.py`（暂不支持）
+- `python`：基于Python的插件，对应的文件后缀为`.py`
 - `javascript`：基于JavaScript的插件，对应的文件后缀为`.mjs`
