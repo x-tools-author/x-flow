@@ -34,4 +34,5 @@ add_compile_definitions(X_FLOW_DLL_EXPORTS)
 set(X_FLOW_PLUGIN_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/plugins)
 enable_testing()
 
+include(bypass/bypass.cmake)
 include(crc32_calc/crc32_calc.cmake)

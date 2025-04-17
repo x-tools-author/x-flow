@@ -8,5 +8,6 @@ project(
   VERSION 1.0
   LANGUAGES C CXX)
 
+enable_testing()
 add_subdirectory(c)
 add_subdirectory(qt)
