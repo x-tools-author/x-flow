@@ -2,8 +2,6 @@
 add_library(crc32_calc SHARED ${CMAKE_CURRENT_SOURCE_DIR}/crc32_calc/crc32_calc.h
                               ${CMAKE_CURRENT_SOURCE_DIR}/crc32_calc/crc32_calc.c)
 target_link_libraries(crc32_calc PUBLIC crc32c)
-set_target_properties(crc32_calc PROPERTIES LIBRARY_OUTPUT_DIRECTORY
-                                            ${X_FLOW_PLUGIN_OUTPUT_DIRECTORY})
 
 # --------------------------------------------------------------------------------------------------
 # Tests

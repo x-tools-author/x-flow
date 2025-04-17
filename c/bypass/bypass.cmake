@@ -2,7 +2,6 @@
 add_library(bypass SHARED ${CMAKE_CURRENT_SOURCE_DIR}/bypass/bypass.h
                           ${CMAKE_CURRENT_SOURCE_DIR}/bypass/bypass.c)
 target_link_libraries(bypass PUBLIC crc32c)
-set_target_properties(bypass PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${X_FLOW_PLUGIN_OUTPUT_DIRECTORY})
 
 # --------------------------------------------------------------------------------------------------
 # Tests

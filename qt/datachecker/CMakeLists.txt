@@ -12,8 +12,6 @@ qt_add_plugin(
   datacheckerui.h
   datacheckerui.ui)
 
-set_target_properties(datachecker PROPERTIES LIBRARY_OUTPUT_DIRECTORY
-                                             ${X_FLOW_PLUGIN_OUTPUT_DIRECTORY})
 set(data_checker_libs Qt${QT_VERSION_MAJOR}::Core)
 list(APPEND data_checker_libs Qt${QT_VERSION_MAJOR}::Gui)
 list(APPEND data_checker_libs Qt${QT_VERSION_MAJOR}::Widgets)
