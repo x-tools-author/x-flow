@@ -7,7 +7,7 @@ def x_flow_plugin_get_caption():
 
 
 def x_flow_plugin_get_name():
-    return "xtools.xflow.plugin.bypass.py"
+    return "x-tools.x-flow.plugin.bypass.py"
 
 
 def x_flow_plugin_get_in_ports():

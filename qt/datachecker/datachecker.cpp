@@ -32,7 +32,7 @@ QString DataChecker::caption() const
 
 QString DataChecker::name() const
 {
-    return QString("xtools.xflow.plugin.datachecker");
+    return QString("x-tools.x-flow.plugin.data_checker");
 }
 
 int DataChecker::inPorts() const

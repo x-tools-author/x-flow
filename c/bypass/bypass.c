@@ -32,7 +32,7 @@ X_FLOW_API const char* x_flow_plugin_get_caption()
 
 X_FLOW_API const char* x_flow_plugin_get_name()
 {
-    static const char* name = "xtools.xflow.plugin.bypass.c";
+    static const char* name = "x-tools.x-flow.plugin.bypass.c";
     return name;
 }
 
