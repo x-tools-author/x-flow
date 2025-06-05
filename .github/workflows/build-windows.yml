@@ -1,0 +1,60 @@
+﻿name: build-windows
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Enables manually
+# on:
+#  push:
+#    branches:
+#      - master
+jobs:
+  build:
+    name: Build with Qt6
+    runs-on: windows-2022
+    strategy:
+      fail-fast: false
+      matrix:
+        version: [6.2.4, 6.5.3, 6.8.3, 6.9.1]
+        arch: [win64_msvc2019_64, win64_msvc2022_64, win64_mingw]
+        exclude:
+          - version: 6.2.4
+            arch: win64_msvc2022_64
+          - version: 6.5.3
+            arch: win64_msvc2022_64
+          - version: 6.8.3
+            arch: win64_msvc2019_64
+          - version: 6.8.3
+            arch: win64_mingw
+          - version: 6.9.0
+            arch: win64_msvc2019_64
+          - version: 6.9.0
+            arch: win64_mingw
+    steps:
+      - name: Pull code
+        uses: actions/checkout@v4
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          aqtversion: '==3.1.*'
+          dir: ${{ github.workspace }}
+          version: ${{ matrix.version }}
+          target: desktop
+          arch: ${{ matrix.arch }}
+          modules: 'qtcharts qtserialbus qtserialport qtwebsockets'
+      - name: build-msvc
+        shell: cmd
+        if: matrix.arch == 'win64_msvc2019_64' || matrix.arch == 'win64_msvc2022_64'
+        run: |
+          mkdir build
+          cd build
+          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x64
+          cmake -DCMAKE_PREFIX_PATH='${{ github.workspace }}/Qt/${{ matrix.version }}/${{ matrix.arch }}' -DCMAKE_BUILD_TYPE=Release -G "Ninja" ../
+          cmake --build . --target all --config Release
+      - name: build-mingw
+        shell: cmd
+        if: matrix.arch == 'win64_mingw'
+        run: |
+          mkdir build
+          cd build
+          cmake -DCMAKE_PREFIX_PATH='${{ github.workspace }}/Qt/${{ matrix.version }}/${{ matrix.arch }}' -DCMAKE_BUILD_TYPE=Release -G "MinGW Makefiles" ../
+          cmake --build . --target all --config Release
