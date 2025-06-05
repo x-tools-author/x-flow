@@ -4,7 +4,7 @@
 [![build-ubuntu](https://github.com/x-tools-author/x-flow/actions/workflows/build-ubuntu.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-ubuntu.yml)
 [![build-macos](https://github.com/x-tools-author/x-flow/actions/workflows/build-macos.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-macos.yml)
 [![build-daily](https://github.com/x-tools-author/x-flow/actions/workflows/build-daily.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-daily.yml)
-[![build-release](https://github.com/x-tools-author/x-flow/actions/workflows/build-daily.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-release.yml)
+[![build-release](https://github.com/x-tools-author/x-flow/actions/workflows/build-release.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-release.yml)
 
 xFlow(Data Flow Studio) is a configurable and extensible communication data transfer tool, currently supports serial port, UDP, TCP, Web Socket data transfer.
 
