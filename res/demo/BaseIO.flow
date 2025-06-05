@@ -1,0 +1,51 @@
+{
+    "connections": [
+        {
+            "inPortIndex": 0,
+            "intNodeId": 12,
+            "outNodeId": 11,
+            "outPortIndex": 0
+        }
+    ],
+    "nodes": [
+        {
+            "id": 11,
+            "internal-data": {
+                "io": {
+                    "data": "1111111111111111",
+                    "escape": 0,
+                    "format": 4,
+                    "prefix": 0,
+                    "suffix": 0
+                },
+                "ioUi": {
+                    "expanded": true
+                },
+                "model-name": "Input"
+            },
+            "position": {
+                "x": 128.05639931248191,
+                "y": 250.90931173678445
+            }
+        },
+        {
+            "id": 12,
+            "internal-data": {
+                "io": {
+                    "channel": 0,
+                    "flag": "test",
+                    "format": 4,
+                    "showTime": true
+                },
+                "ioUi": {
+                    "expanded": true
+                },
+                "model-name": "Output"
+            },
+            "position": {
+                "x": 819.0442681320336,
+                "y": 106.88770335510569
+            }
+        }
+    ]
+}

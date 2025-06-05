@@ -1,0 +1,46 @@
+title: xFlow 用户手册 & 开发者手册
+description: xFlow 用户手册 & 开发者手册
+theme: just-the-docs
+
+url: https://x-tools-author.github.io/x-flow
+
+aux_links_new_tab: true
+aux_links:
+  访问xFlow项目仓库: https://github.com/x-tools-author/x-flow
+
+permalink: pretty
+
+# logo
+# logo: "/assets/images/logo.png"
+favicon_ico: "/assets/images/logo.ico"
+
+defaults:
+  - scope:
+      path: "docs" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: "default"
+
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+color_scheme: nil
+
+callouts_level: quiet # or loud
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
