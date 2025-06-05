@@ -1,8 +1,10 @@
-﻿# xFLow [![LGPL License](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0.html) ![CodeSize](https://img.shields.io/github/languages/code-size/x-tools-author/x-flow) ![RepoSize](https://img.shields.io/github/repo-size/x-tools-author/x-flow) [![Static Badge](https://img.shields.io/badge/sponsor-Microsoft_Sotre-blue)](https://apps.microsoft.com/detail/9p29h1ndnkbb) [![build-daily](https://github.com/x-tools-author/x-flow/actions/workflows/build-daily.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-daily.yml)
+﻿# xFLow [![LGPL License](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0.html) ![CodeSize](https://img.shields.io/github/languages/code-size/x-tools-author/x-flow) ![RepoSize](https://img.shields.io/github/repo-size/x-tools-author/x-flow) [![Static Badge](https://img.shields.io/badge/sponsor-Microsoft_Sotre-blue)](https://apps.microsoft.com/detail/9p29h1ndnkbb)
 
 [![build-windows](https://github.com/x-tools-author/x-flow/actions/workflows/build-windows.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-windows.yml)
 [![build-ubuntu](https://github.com/x-tools-author/x-flow/actions/workflows/build-ubuntu.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-ubuntu.yml)
 [![build-macos](https://github.com/x-tools-author/x-flow/actions/workflows/build-macos.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-macos.yml)
+[![build-daily](https://github.com/x-tools-author/x-flow/actions/workflows/build-daily.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-daily.yml)
+[![build-release](https://github.com/x-tools-author/x-flow/actions/workflows/build-daily.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-release.yml)
 
 xFlow(Data Flow Studio) is a configurable and extensible communication data transfer tool, currently supports serial port, UDP, TCP, Web Socket data transfer.
 
