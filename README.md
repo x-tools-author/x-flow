@@ -16,8 +16,8 @@ xFlow(Data Flow Studio) is a configurable and extensible communication data tran
 [![stars](https://img.shields.io/github/stars/x-tools-author/x-flow?style=social)](https://img.shields.io/github/stars/x-tools-author/x-flow?style=social)
 [![forks](https://img.shields.io/github/forks/x-tools-author/x-flow?style=social)](https://img.shields.io/github/forks/x-tools-author/x-flow?style=social)
 [![watchers](https://img.shields.io/github/watchers/x-tools-author/x-flow?style=social)](https://img.shields.io/github/watchers/x-tools-author/x-flow?style=social)
-[![star](https://gitee.com/x-tools-author/x-flow/badge/star.svg?theme=dark)](https://gitee.com/x-tools-author/x-tools/stargazers)
-[![fork](https://gitee.com/x-tools-author/x-flow/badge/fork.svg?theme=dark)](https://gitee.com/x-tools-author/x-tools/members)
+[![star](https://gitee.com/x-tools-author/x-flow/badge/star.svg?theme=dark)](https://gitee.com/x-tools-author/x-flow/stargazers)
+[![fork](https://gitee.com/x-tools-author/x-flow/badge/fork.svg?theme=dark)](https://gitee.com/x-tools-author/x-flow/members)
 
 |Option|Description|
 |---|---|
