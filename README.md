@@ -4,7 +4,7 @@
 [![build-ubuntu](https://github.com/x-tools-author/x-flow/actions/workflows/build-ubuntu.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-ubuntu.yml)
 [![build-macos](https://github.com/x-tools-author/x-flow/actions/workflows/build-macos.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-macos.yml)
 
-xFlow is a configurable and extensible communication data transfer tool, currently supports serial port, UDP, TCP, Web Socket data transfer.
+xFlow(Data Flow Studio) is a configurable and extensible communication data transfer tool, currently supports serial port, UDP, TCP, Web Socket data transfer.
 
 > **You can get *xFlow* form [Micorsoft Store(sponsor)](https://apps.microsoft.com/detail/9pjk7d83p014)** or from [Github Release(community)](https://github.com/x-tools-author/x-flow/releases).
 

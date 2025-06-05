@@ -2,6 +2,12 @@ cmake_minimum_required(VERSION 3.25)
 project(xFlow VERSION 3.0)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
+if(NOT ${CMAKE_VERSION} VERSION_LESS "4.0.0")
+  set(CMAKE_POLICY_VERSION_MINIMUM
+      "3.25"
+      CACHE STRING "CMake policy version" FORCE)
+endif()
+
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
