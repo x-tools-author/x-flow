@@ -10,14 +10,23 @@ xFlow(Data Flow Studio) is a configurable and extensible communication data tran
 
 > **You can get *xFlow* form [Micorsoft Store(sponsor)](https://apps.microsoft.com/detail/9pjk7d83p014)** or from [Github Release(community)](https://github.com/x-tools-author/x-flow/releases).
 
+## About the Project
+
+<!--https://sdpro.top/blog/html/article/1016.html-->
+[![stars](https://img.shields.io/github/stars/x-tools-author/x-flow?style=social)](https://img.shields.io/github/stars/x-tools-author/x-flow?style=social)
+[![forks](https://img.shields.io/github/forks/x-tools-author/x-flow?style=social)](https://img.shields.io/github/forks/x-tools-author/x-flow?style=social)
+[![watchers](https://img.shields.io/github/watchers/x-tools-author/x-flow?style=social)](https://img.shields.io/github/watchers/x-tools-author/x-flow?style=social)
+[![star](https://gitee.com/x-tools-author/x-flow/badge/star.svg?theme=dark)](https://gitee.com/x-tools-author/x-tools/stargazers)
+[![fork](https://gitee.com/x-tools-author/x-flow/badge/fork.svg?theme=dark)](https://gitee.com/x-tools-author/x-tools/members)
+
 |Option|Description|
 |---|---|
 |Author|x-tools-author|
 |E-mail|<x-tools@outlook.com>|
 |User Communication| 952218522 (QQ Group)|
 |Qt Technology Communication|723516989 (QQ Group)|
-|Gitee| <https://gitee.com/x-tools-author/x-tools>|
-|GitHub| <https://github.com/x-tools-author/x-tools>|
+|Gitee| <https://gitee.com/x-tools-author/x-flow>|
+|GitHub| <https://github.com/x-tools-author/x-flow>|
 |Sponsor|<https://apps.microsoft.com/search/publisher?name=x-tools-author>|
 |Third party|[glog](https://github.com/google/glog) [nodeeditor](https://github.com/paceholder/nodeeditor) [qlementine](https://github.com/oclero/qlementine) [lua](https://github.com/lua/lua) [Qt-AES](https://github.com/bricke/Qt-AES)|
 
