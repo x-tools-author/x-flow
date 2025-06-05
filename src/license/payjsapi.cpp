@@ -74,7 +74,7 @@ void PayJsApi::run()
 
     // Generate order. https://help.payjs.cn/api/native.html
     QJsonObject jsonObj;
-    jsonObj.insert(QString("mchid"), QString("1602508490"));
+    jsonObj.insert(QString("mchid"), QString(m_machineId));
     jsonObj.insert(QString("total_fee"), QString::number(m_price));
     jsonObj.insert(QString("out_trade_no"), QDateTime::currentDateTime().toString("yyyyMMddhhmmss"));
     jsonObj = payJsSign(m_communicationKey, jsonObj);
@@ -84,7 +84,7 @@ void PayJsApi::run()
             reply,
             &QNetworkReply::finished,
             this,
-            [=]() {
+            [=, this]() {
                 if (reply->error() == QNetworkReply::NoError) {
                     QJsonDocument jsonDoc = QJsonDocument::fromJson(reply->readAll());
                     QJsonObject jsonObj = jsonDoc.object();
@@ -116,7 +116,7 @@ void PayJsApi::downloadQrCode(const QUrl& url)
     request.setHeader(QNetworkRequest::ContentTypeHeader, QString("application/json"));
     auto reply = m_networkAccessManager->get(request);
 
-    connect(reply, &QNetworkReply::finished, this, [=]() {
+    connect(reply, &QNetworkReply::finished, this, [=, this]() {
         QByteArray data = reply->readAll();
         QImage qrCode;
         qrCode.loadFromData(reinterpret_cast<uchar*>(data.data()), data.length());
@@ -126,7 +126,7 @@ void PayJsApi::downloadQrCode(const QUrl& url)
     connect(reply,
             QOverload<QNetworkReply::NetworkError>::of(&QNetworkReply::errorOccurred),
             this,
-            [=]() { emit errorOccurred(reply->errorString()); });
+            [=, this]() { emit errorOccurred(reply->errorString()); });
 }
 
 void PayJsApi::checkOrderState(const QString& orderId)
@@ -141,7 +141,7 @@ void PayJsApi::checkOrderState(const QString& orderId)
     auto reply = m_networkAccessManager->post(networkRequest,
                                               jsonDoc.toJson(QJsonDocument::Compact));
     if (reply) {
-        QObject::connect(reply, &QNetworkReply::finished, this, [=]() {
+        QObject::connect(reply, &QNetworkReply::finished, this, [=, this]() {
             if (reply->error() == QNetworkReply::NoError) {
                 QJsonDocument jsonDoc = QJsonDocument::fromJson(reply->readAll());
                 QJsonObject jsonObj = jsonDoc.object();
