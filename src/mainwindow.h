@@ -88,6 +88,13 @@ private:
     void initFileMenu();
     void initFileMenuRecently(QMenu *fileMenu);
     void initEditMenu();
+    void initOptionMenu();
+    void initOptionMenuHdpi(QMenu *optionMenu);
+    void initOptionMenuSettings(QMenu *optionMenu);
+    void initOptionMenuTheme(QMenu *optionMenu);
+    void initOptionMenuPlugins(QMenu *optionMenu);
+    void initOptionMenuLanguages(QMenu *optionMenu);
+    void initOptionMenuProxy(QMenu *optionMenu);
     void initViewMenu();
     void initHelpMenu();
 
@@ -114,7 +121,6 @@ private:
     QString defaultOpenPath();
     void setDefaultOpenPath(const QString &path);
     void addRecentlyFile(const QString &fileName);
-    void showPreferenceDialog();
 
     // 许可相关接口
     bool showTrialLicenseWarning();

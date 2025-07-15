@@ -53,7 +53,7 @@
 #include "common/common.h"
 #include "nodeeditor/nodeeditor.h"
 #include "nodeeditor/nodeeditorview.h"
-#include "preference/preference.h"
+#include "nodeeditor/plugin/pluginmanager.h"
 #include "theme/thememanager.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -270,7 +270,7 @@ void MainWindow::init()
 {
     initFileMenu();
     initEditMenu();
-
+    initOptionMenu();
     initToolBar();
     initViewMenu();
     initHelpMenu();
@@ -318,8 +318,6 @@ void MainWindow::initFileMenu()
     fileMenu->addSeparator();
     initFileMenuRecently(fileMenu);
     fileMenu->addSeparator();
-    fileMenu->addAction(tr("Preference"), this, &MainWindow::showPreferenceDialog);
-    fileMenu->addSeparator();
     fileMenu->addAction(QIcon(":/res/icons/close.svg"), tr("&Exit"), this, &MainWindow::close);
 }
 
@@ -361,6 +359,160 @@ void MainWindow::initEditMenu()
 {
     m_editMenu = new QMenu(tr("&Edit"), this);
     menuBar()->addMenu(m_editMenu);
+}
+
+void MainWindow::initOptionMenu()
+{
+    QMenu *optionMenu = menuBar()->addMenu(tr("&Options"));
+    initOptionMenuHdpi(optionMenu);
+    initOptionMenuSettings(optionMenu);
+    initOptionMenuTheme(optionMenu);
+    initOptionMenuPlugins(optionMenu);
+    optionMenu->addSeparator();
+    initOptionMenuLanguages(optionMenu);
+    optionMenu->addSeparator();
+    initOptionMenuProxy(optionMenu);
+}
+
+void MainWindow::initOptionMenuHdpi(QMenu *optionMenu)
+{
+    typedef Qt::HighDpiScaleFactorRoundingPolicy Policy;
+    static QMap<Policy, QString> policyMap;
+    if (policyMap.isEmpty()) {
+        policyMap.insert(Policy::Round, QObject::tr("Round up for .5 and above"));
+        policyMap.insert(Policy::Ceil, QObject::tr("Always round up"));
+        policyMap.insert(Policy::Floor, QObject::tr("Always round down"));
+        policyMap.insert(Policy::RoundPreferFloor, QObject::tr("Round up for .75 and above"));
+        policyMap.insert(Policy::PassThrough, QObject::tr("Don't round"));
+    }
+
+    QMenu *menu = optionMenu->addMenu(tr("High DPI policy"));
+    static QActionGroup *group = new QActionGroup(this);
+    for (auto it = policyMap.begin(); it != policyMap.end(); ++it) {
+        QString name = it.value();
+        int policy = static_cast<int>(it.key());
+        QAction *action = new QAction(name);
+        action->setCheckable(true);
+        action->setData(policy);
+        group->addAction(action);
+        menu->addAction(action);
+        if (policy == static_cast<int>(xApp->highDpiScaleFactorRoundingPolicy())) {
+            action->setChecked(true);
+        }
+
+        connect(action, &QAction::triggered, this, [=, this]() {
+            QSettings *settings = xApp->settings();
+            settings->setValue(Application::SettingsKey().hdpi, action->data().toInt());
+            tryToReboot();
+        });
+    }
+}
+
+void MainWindow::initOptionMenuSettings(QMenu *optionMenu)
+{
+    QMenu *menu = optionMenu->addMenu(tr("Settings"));
+    menu->addAction(tr("Open Settings Path"), this, []() {
+        QDesktopServices::openUrl(xApp->settingsPath());
+    });
+
+    menu->addAction(tr("Clear Settings on Next Booting"), this, [=, this]() {
+        QSettings *settings = xApp->settings();
+        settings->setValue(Application::SettingsKey().clearSettings, true);
+        tryToReboot();
+    });
+}
+
+void MainWindow::initOptionMenuTheme(QMenu *optionMenu)
+{
+    QMenu *menu = optionMenu->addMenu(tr("Themes"));
+    QList<QPair<QString, QString>> themes = ThemeManager::singleton().supportedThemes();
+    Application::SettingsKey settingKeys;
+    QString currentTheme = xApp->settings()->value("Application/theme", xDarkTheme).toString();
+    static QActionGroup *group = new QActionGroup(this);
+    for (QPair<QString, QString> &theme : themes) {
+        QString themeKey = theme.second;
+        QAction *action = menu->addAction(theme.first, this, [=, this]() {
+            xApp->settings()->setValue(settingKeys.theme, themeKey);
+            updateTheme(themeKey);
+        });
+
+        action->setCheckable(true);
+        group->addAction(action);
+        if (themeKey == currentTheme) {
+            action->setChecked(true);
+        }
+    }
+}
+
+void MainWindow::initOptionMenuPlugins(QMenu *optionMenu)
+{
+    QString pathKey = Application::SettingsKey().pluginsPath;
+    QString defaultPath = QCoreApplication::applicationDirPath() + "/plugins";
+    QString pluginsPath = xApp->settings()->value(pathKey, defaultPath).toString();
+
+    QMenu *menu = optionMenu->addMenu(tr("Plugins"));
+    menu->addAction(tr("Open Plugins Directory"), this, [=, this]() {
+        QDesktopServices::openUrl(pluginsPath);
+    });
+
+    menu->addAction(tr("Set Plugins Path"), this, [=, this]() {
+        QString path = QFileDialog::getExistingDirectory(this,
+                                                         tr("Select Plugins Path"),
+                                                         pluginsPath);
+        if (!path.isEmpty()) {
+            xApp->settings()->setValue(pathKey, path);
+        }
+    });
+
+    menu->addAction(tr("Reset Plugins Path"), this, [=, this]() {
+        xApp->settings()->setValue(pathKey, defaultPath);
+    });
+
+    PluginManager::singleton().loadPlugins(pluginsPath);
+}
+
+void MainWindow::initOptionMenuLanguages(QMenu *optionMenu)
+{
+    typedef QMap<QString, QString> LanguageMap;
+    LanguageMap supportedLanguages = {
+        {"en", "English"},
+        {"zh_CN", "简体中文"},
+    };
+
+    QString defaultLanguage = QLocale::system().name();
+    QMenu *menu = optionMenu->addMenu(tr("Languages"));
+    static QActionGroup *group = new QActionGroup(this);
+    for (auto it = supportedLanguages.begin(); it != supportedLanguages.end(); ++it) {
+        QString lang = it.key();
+        QString name = it.value();
+        QAction *action = menu->addAction(name, this, [=, this]() {
+            xApp->settings()->setValue(Application::SettingsKey().language, lang);
+            xApp->tryToReboot();
+        });
+
+        action->setCheckable(true);
+        group->addAction(action);
+        if (lang == defaultLanguage) {
+            action->setChecked(true);
+        }
+    }
+}
+
+void MainWindow::initOptionMenuProxy(QMenu *optionMenu)
+{
+    auto keys = Application::SettingsKey();
+    bool useSystemProxy = xApp->settings()->value(keys.useSystemProxy, false).toBool();
+    auto action = optionMenu->addAction(tr("Use System Proxy"));
+    action->setCheckable(true);
+    action->setChecked(useSystemProxy);
+    connect(action, &QAction::triggered, this, [=, this](bool checked) {
+        xApp->settings()->setValue(keys.useSystemProxy, checked);
+        if (checked) {
+            QNetworkProxyFactory::setUseSystemConfiguration(true);
+        } else {
+            QNetworkProxyFactory::setUseSystemConfiguration(false);
+        }
+    });
 }
 
 void MainWindow::initViewMenu()
@@ -921,20 +1073,6 @@ void MainWindow::addRecentlyFile(const QString &fileName)
         tmp.removeFirst();
     }
     xApp->settings()->setValue(m_settingsKey.recently, tmp);
-}
-
-void MainWindow::showPreferenceDialog()
-{
-    if (m_preference == nullptr) {
-        m_preference = new Preference(this);
-        connect(m_preference, &Preference::themeChanged, this, &MainWindow::updateTheme);
-    }
-
-    ThemeManager::singleton().updateWindowTitleArea(m_preference);
-    m_preference->setModal(true);
-    m_preference->show();
-    m_preference->raise();
-    m_preference->exec();
 }
 
 void MainWindow::setModified(bool modified)
