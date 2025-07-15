@@ -99,109 +99,6 @@
     </message>
 </context>
 <context>
-    <name>BleCentral</name>
-    <message>
-        <location filename="../../src/device/blecentral.cpp" line="92"/>
-        <source>Characteristic does not support write</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentral.cpp" line="98"/>
-        <source>Characteristic does not support write without response</source>
-        <translation></translation>
-    </message>
-</context>
-<context>
-    <name>BleCentralUi</name>
-    <message>
-        <location filename="../../src/device/blecentralui.ui" line="14"/>
-        <source>Form</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.ui" line="41"/>
-        <source>Characteristic</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.ui" line="61"/>
-        <source>(Unsupported characteristic)</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.ui" line="77"/>
-        <source>BLE Devices</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.ui" line="87"/>
-        <location filename="../../src/device/blecentralui.cpp" line="43"/>
-        <source>Scan</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.ui" line="96"/>
-        <location filename="../../src/device/blecentralui.cpp" line="142"/>
-        <source>Notify</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.ui" line="103"/>
-        <source>Read</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.ui" line="115"/>
-        <source>Service scanning</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.ui" line="150"/>
-        <source>Write mode</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.ui" line="163"/>
-        <source>Service</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.ui" line="170"/>
-        <source>Device scanning</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.cpp" line="38"/>
-        <source>Stop</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.cpp" line="51"/>
-        <source>Error Occurred</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.cpp" line="140"/>
-        <source>Disnotify</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.cpp" line="152"/>
-        <source>With Response</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.cpp" line="157"/>
-        <source>Without Response</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.cpp" line="210"/>
-        <source>(No name)</source>
-        <translation></translation>
-    </message>
-</context>
-<context>
     <name>ChartsTest</name>
     <message>
         <location filename="../../src/device/chartstest.cpp" line="29"/>
@@ -225,7 +122,7 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../../src/nodeeditor/nodes/script/commandline.cpp" line="122"/>
+        <location filename="../../src/nodeeditor/nodes/script/commandline.cpp" line="35"/>
         <source>Command Line</source>
         <translation></translation>
     </message>
@@ -499,62 +396,62 @@
 <context>
     <name>DeviceFactory</name>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="76"/>
+        <location filename="../../src/device/devicefactory.cpp" line="72"/>
         <source>Serial Port</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="78"/>
+        <location filename="../../src/device/devicefactory.cpp" line="74"/>
         <source>BLE Central</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="80"/>
+        <location filename="../../src/device/devicefactory.cpp" line="76"/>
         <source>BLE Peripheral</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="82"/>
+        <location filename="../../src/device/devicefactory.cpp" line="78"/>
         <source>UDP Client</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="84"/>
+        <location filename="../../src/device/devicefactory.cpp" line="80"/>
         <source>UDP Server</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="86"/>
+        <location filename="../../src/device/devicefactory.cpp" line="82"/>
         <source>TCP Client</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="88"/>
+        <location filename="../../src/device/devicefactory.cpp" line="84"/>
         <source>TCP Server</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="90"/>
+        <location filename="../../src/device/devicefactory.cpp" line="86"/>
         <source>WebSocket Client</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="92"/>
+        <location filename="../../src/device/devicefactory.cpp" line="88"/>
         <source>WebSocket Server</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="94"/>
+        <location filename="../../src/device/devicefactory.cpp" line="90"/>
         <source>Local Socket</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="96"/>
+        <location filename="../../src/device/devicefactory.cpp" line="92"/>
         <source>Local Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="98"/>
+        <location filename="../../src/device/devicefactory.cpp" line="94"/>
         <source>Charts Test</source>
         <translation></translation>
     </message>
@@ -650,7 +547,7 @@
 <context>
     <name>JavaScript</name>
     <message>
-        <location filename="../../src/nodeeditor/nodes/script/javascript.cpp" line="109"/>
+        <location filename="../../src/nodeeditor/nodes/script/javascript.cpp" line="31"/>
         <source>Java Script</source>
         <translation></translation>
     </message>
@@ -658,7 +555,7 @@
 <context>
     <name>JavaScriptThread</name>
     <message>
-        <location filename="../../src/nodeeditor/nodes/script/javascript.cpp" line="81"/>
+        <location filename="../../src/nodeeditor/nodes/script/javascriptthread.cpp" line="77"/>
         <source>The script is invalid.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -955,7 +852,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 <context>
     <name>LuaScript</name>
     <message>
-        <location filename="../../src/nodeeditor/nodes/script/luascript.cpp" line="129"/>
+        <location filename="../../src/nodeeditor/nodes/script/luascript.cpp" line="33"/>
         <source>Lua Script</source>
         <translation></translation>
     </message>
@@ -980,34 +877,29 @@ li.checked::marker { content: &quot;\2612&quot;; }
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="279"/>
+        <location filename="../../src/mainwindow.cpp" line="281"/>
         <source>&amp;File</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="280"/>
+        <location filename="../../src/mainwindow.cpp" line="282"/>
         <source>&amp;New</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="286"/>
+        <location filename="../../src/mainwindow.cpp" line="288"/>
         <source>&amp;Open</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="296"/>
+        <location filename="../../src/mainwindow.cpp" line="298"/>
         <source>&amp;Save</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="306"/>
+        <location filename="../../src/mainwindow.cpp" line="308"/>
         <source>Save As</source>
         <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="319"/>
-        <source>Preference</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="321"/>
@@ -1031,240 +923,305 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="366"/>
+        <source>&amp;Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="389"/>
+        <source>High DPI policy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="413"/>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="414"/>
+        <source>Open Settings Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="418"/>
+        <source>Clear Settings on Next Booting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="427"/>
+        <source>Themes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="453"/>
+        <source>Plugins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="454"/>
+        <source>Open Plugins Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="458"/>
+        <source>Set Plugins Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="460"/>
+        <source>Select Plugins Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="467"/>
+        <source>Reset Plugins Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="483"/>
+        <source>Languages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="505"/>
+        <source>Use System Proxy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="520"/>
         <source>&amp;View</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="383"/>
+        <location filename="../../src/mainwindow.cpp" line="537"/>
         <source>Show Ruler</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="394"/>
+        <location filename="../../src/mainwindow.cpp" line="548"/>
         <source>Show Vernier</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="406"/>
+        <location filename="../../src/mainwindow.cpp" line="560"/>
         <source>Show Grid</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="422"/>
+        <location filename="../../src/mainwindow.cpp" line="576"/>
         <source>&amp;Help</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="423"/>
+        <location filename="../../src/mainwindow.cpp" line="577"/>
         <source>About Qt</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="425"/>
-        <location filename="../../src/mainwindow.cpp" line="729"/>
+        <location filename="../../src/mainwindow.cpp" line="579"/>
+        <location filename="../../src/mainwindow.cpp" line="883"/>
         <source>About</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="430"/>
+        <location filename="../../src/mainwindow.cpp" line="584"/>
         <source>Screenshot</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="439"/>
+        <location filename="../../src/mainwindow.cpp" line="593"/>
         <source>Buy from Store</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="451"/>
+        <location filename="../../src/mainwindow.cpp" line="605"/>
         <source>Online Manual</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="454"/>
+        <location filename="../../src/mainwindow.cpp" line="608"/>
         <source>Plugin Developing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="470"/>
+        <location filename="../../src/mainwindow.cpp" line="624"/>
         <source>Register</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="477"/>
+        <location filename="../../src/mainwindow.cpp" line="631"/>
         <source>Third Party Open Source</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="493"/>
+        <location filename="../../src/mainwindow.cpp" line="647"/>
         <source>File Tool Bar</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="503"/>
+        <location filename="../../src/mainwindow.cpp" line="657"/>
         <source>View Tool Bar</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="506"/>
+        <location filename="../../src/mainwindow.cpp" line="660"/>
         <source>Reset Scale</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="511"/>
+        <location filename="../../src/mainwindow.cpp" line="665"/>
         <source>Zoom Out</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="518"/>
+        <location filename="../../src/mainwindow.cpp" line="672"/>
         <source>Zoom In</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="552"/>
+        <location filename="../../src/mainwindow.cpp" line="706"/>
         <source>Edit Tool Bar</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="565"/>
+        <location filename="../../src/mainwindow.cpp" line="719"/>
         <source>Align to Top</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="566"/>
+        <location filename="../../src/mainwindow.cpp" line="720"/>
         <source>Align to Bottom</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="567"/>
+        <location filename="../../src/mainwindow.cpp" line="721"/>
         <source>Align to Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="568"/>
+        <location filename="../../src/mainwindow.cpp" line="722"/>
         <source>Align to Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="569"/>
+        <location filename="../../src/mainwindow.cpp" line="723"/>
         <source>Align to Vertical Center</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="570"/>
+        <location filename="../../src/mainwindow.cpp" line="724"/>
         <source>Align to Horizontal Center</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="571"/>
-        <location filename="../../src/mainwindow.cpp" line="572"/>
+        <location filename="../../src/mainwindow.cpp" line="725"/>
+        <location filename="../../src/mainwindow.cpp" line="726"/>
         <source>Align Justify Space Even</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="586"/>
+        <location filename="../../src/mainwindow.cpp" line="740"/>
         <source>Select All Nodes</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="596"/>
+        <location filename="../../src/mainwindow.cpp" line="750"/>
         <source>Delete Selected Nodes</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="602"/>
+        <location filename="../../src/mainwindow.cpp" line="756"/>
         <source>Delete All Selected Nodes</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="603"/>
+        <location filename="../../src/mainwindow.cpp" line="757"/>
         <source>All selected nodes will be delete, are you sure?</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="611"/>
-        <location filename="../../src/mainwindow.cpp" line="616"/>
+        <location filename="../../src/mainwindow.cpp" line="765"/>
+        <location filename="../../src/mainwindow.cpp" line="770"/>
         <source>Clear All Nodes</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="617"/>
+        <location filename="../../src/mainwindow.cpp" line="771"/>
         <source>All nodes will be delete, are you sure?</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="628"/>
+        <location filename="../../src/mainwindow.cpp" line="782"/>
         <source>New Project</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="630"/>
+        <location filename="../../src/mainwindow.cpp" line="784"/>
         <source>Project (*.flow)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="645"/>
+        <location filename="../../src/mainwindow.cpp" line="799"/>
         <source>Open Flow Scene</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="647"/>
+        <location filename="../../src/mainwindow.cpp" line="801"/>
         <source>Flow Scene Files (*.flow)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="674"/>
+        <location filename="../../src/mainwindow.cpp" line="828"/>
         <source>Save Project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="676"/>
+        <location filename="../../src/mainwindow.cpp" line="830"/>
         <source>Project (*.flow);;All file (*.*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="717"/>
+        <location filename="../../src/mainwindow.cpp" line="871"/>
         <source>Unknown</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="723"/>
+        <location filename="../../src/mainwindow.cpp" line="877"/>
         <source>Commit hash</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="725"/>
+        <location filename="../../src/mainwindow.cpp" line="879"/>
         <source>Commit time</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="726"/>
+        <location filename="../../src/mainwindow.cpp" line="880"/>
         <source>Build Date</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="727"/>
+        <location filename="../../src/mainwindow.cpp" line="881"/>
         <source>Copyright</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="728"/>
+        <location filename="../../src/mainwindow.cpp" line="882"/>
         <source>All rights reserved.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="890"/>
+        <location filename="../../src/mainwindow.cpp" line="1044"/>
         <source>Trial Edition Limitation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="891"/>
+        <location filename="../../src/mainwindow.cpp" line="1045"/>
         <source>This is a trial edition, please register to use all features.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="958"/>
-        <location filename="../../src/mainwindow.cpp" line="967"/>
+        <location filename="../../src/mainwindow.cpp" line="1098"/>
+        <location filename="../../src/mainwindow.cpp" line="1107"/>
         <source>Trial Edition</source>
         <translation></translation>
     </message>
@@ -1386,94 +1343,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <location filename="../../src/dockwidgets/output/outputdockwidgetcontenttextbroswer.cpp" line="45"/>
         <source>Failed to save file!</source>
         <translation></translation>
-    </message>
-</context>
-<context>
-    <name>Preference</name>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="14"/>
-        <source>Preference</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="27"/>
-        <source>General</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="46"/>
-        <source>Application language</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="69"/>
-        <source>High DPI policy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="89"/>
-        <source>Application theme</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="96"/>
-        <source>Network proxy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="103"/>
-        <source>Use System Proxy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="111"/>
-        <source>Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="117"/>
-        <source>Open Settings Path</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="150"/>
-        <source>Clear Settings on Next Booting</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="158"/>
-        <source>Plugins</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="174"/>
-        <source>Reset</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="201"/>
-        <source>Plugins path</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="181"/>
-        <source>Browse</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="208"/>
-        <source>The settings need to reboot application to effectived.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.ui" line="234"/>
-        <source>Close</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/preference/preference.cpp" line="183"/>
-        <source>Select Plugins Path</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1612,32 +1481,32 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/main.cpp" line="49"/>
+        <location filename="../../src/main.cpp" line="53"/>
         <source>Application is booting...</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.cpp" line="81"/>
+        <location filename="../../src/mainwindow.cpp" line="382"/>
         <source>Round up for .5 and above</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.cpp" line="82"/>
+        <location filename="../../src/mainwindow.cpp" line="383"/>
         <source>Always round up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.cpp" line="83"/>
+        <location filename="../../src/mainwindow.cpp" line="384"/>
         <source>Always round down</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.cpp" line="84"/>
+        <location filename="../../src/mainwindow.cpp" line="385"/>
         <source>Round up for .75 and above</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.cpp" line="85"/>
+        <location filename="../../src/mainwindow.cpp" line="386"/>
         <source>Don&apos;t round</source>
         <translation></translation>
     </message>

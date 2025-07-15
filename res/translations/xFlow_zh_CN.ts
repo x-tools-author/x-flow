@@ -101,104 +101,79 @@
 <context>
     <name>BleCentral</name>
     <message>
-        <location filename="../../src/device/blecentral.cpp" line="92"/>
         <source>Characteristic does not support write</source>
-        <translation>特征值不支持写操作</translation>
+        <translation type="vanished">特征值不支持写操作</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentral.cpp" line="98"/>
         <source>Characteristic does not support write without response</source>
-        <translation>特征值不支持没有应答的写操作</translation>
+        <translation type="vanished">特征值不支持没有应答的写操作</translation>
     </message>
 </context>
 <context>
     <name>BleCentralUi</name>
     <message>
-        <location filename="../../src/device/blecentralui.ui" line="14"/>
-        <source>Form</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/device/blecentralui.ui" line="41"/>
         <source>Characteristic</source>
-        <translation>特征值</translation>
+        <translation type="vanished">特征值</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentralui.ui" line="61"/>
         <source>(Unsupported characteristic)</source>
-        <translation>(不支持的特征值)</translation>
+        <translation type="vanished">(不支持的特征值)</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentralui.ui" line="77"/>
         <source>BLE Devices</source>
-        <translation>BLE设备</translation>
+        <translation type="vanished">BLE设备</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentralui.ui" line="87"/>
-        <location filename="../../src/device/blecentralui.cpp" line="43"/>
         <source>Scan</source>
-        <translation>扫描</translation>
+        <translation type="vanished">扫描</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentralui.ui" line="96"/>
-        <location filename="../../src/device/blecentralui.cpp" line="142"/>
         <source>Notify</source>
-        <translation>通知</translation>
+        <translation type="vanished">通知</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentralui.ui" line="103"/>
         <source>Read</source>
-        <translation>读取</translation>
+        <translation type="vanished">读取</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentralui.ui" line="115"/>
         <source>Service scanning</source>
-        <translation>服务搜索中</translation>
+        <translation type="vanished">服务搜索中</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentralui.ui" line="150"/>
         <source>Write mode</source>
-        <translation>写模式</translation>
+        <translation type="vanished">写模式</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentralui.ui" line="163"/>
         <source>Service</source>
-        <translation>服务</translation>
+        <translation type="vanished">服务</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentralui.ui" line="170"/>
         <source>Device scanning</source>
-        <translation>设备扫描中</translation>
+        <translation type="vanished">设备扫描中</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentralui.cpp" line="38"/>
         <source>Stop</source>
-        <translation>停止</translation>
+        <translation type="vanished">停止</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentralui.cpp" line="51"/>
         <source>Error Occurred</source>
-        <translation>出现错误</translation>
+        <translation type="vanished">出现错误</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentralui.cpp" line="140"/>
         <source>Disnotify</source>
-        <translation>取消通知</translation>
+        <translation type="vanished">取消通知</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentralui.cpp" line="152"/>
         <source>With Response</source>
-        <translation>需要应答</translation>
+        <translation type="vanished">需要应答</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentralui.cpp" line="157"/>
         <source>Without Response</source>
-        <translation>不需要应答</translation>
+        <translation type="vanished">不需要应答</translation>
     </message>
     <message>
-        <location filename="../../src/device/blecentralui.cpp" line="210"/>
         <source>(No name)</source>
-        <translation>(未命名)</translation>
+        <translation type="vanished">(未命名)</translation>
     </message>
 </context>
 <context>
@@ -225,7 +200,7 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../../src/nodeeditor/nodes/script/commandline.cpp" line="122"/>
+        <location filename="../../src/nodeeditor/nodes/script/commandline.cpp" line="35"/>
         <source>Command Line</source>
         <translation>命令行</translation>
     </message>
@@ -499,62 +474,62 @@
 <context>
     <name>DeviceFactory</name>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="76"/>
+        <location filename="../../src/device/devicefactory.cpp" line="72"/>
         <source>Serial Port</source>
         <translation>串口通信</translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="78"/>
+        <location filename="../../src/device/devicefactory.cpp" line="74"/>
         <source>BLE Central</source>
         <translation>BLE中心设备</translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="80"/>
+        <location filename="../../src/device/devicefactory.cpp" line="76"/>
         <source>BLE Peripheral</source>
         <translation>BLE外围设备</translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="82"/>
+        <location filename="../../src/device/devicefactory.cpp" line="78"/>
         <source>UDP Client</source>
         <translation>UDP客户端</translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="84"/>
+        <location filename="../../src/device/devicefactory.cpp" line="80"/>
         <source>UDP Server</source>
         <translation>UDP服务器</translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="86"/>
+        <location filename="../../src/device/devicefactory.cpp" line="82"/>
         <source>TCP Client</source>
         <translation>TCP客户端</translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="88"/>
+        <location filename="../../src/device/devicefactory.cpp" line="84"/>
         <source>TCP Server</source>
         <translation>TCP服务器</translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="90"/>
+        <location filename="../../src/device/devicefactory.cpp" line="86"/>
         <source>WebSocket Client</source>
         <translation>Web Socket客户端</translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="92"/>
+        <location filename="../../src/device/devicefactory.cpp" line="88"/>
         <source>WebSocket Server</source>
         <translation>Web Socket服务器</translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="94"/>
+        <location filename="../../src/device/devicefactory.cpp" line="90"/>
         <source>Local Socket</source>
         <translation>本地客户端</translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="96"/>
+        <location filename="../../src/device/devicefactory.cpp" line="92"/>
         <source>Local Server</source>
         <translation>本地服务器</translation>
     </message>
     <message>
-        <location filename="../../src/device/devicefactory.cpp" line="98"/>
+        <location filename="../../src/device/devicefactory.cpp" line="94"/>
         <source>Charts Test</source>
         <translation>图表测试</translation>
     </message>
@@ -650,7 +625,7 @@
 <context>
     <name>JavaScript</name>
     <message>
-        <location filename="../../src/nodeeditor/nodes/script/javascript.cpp" line="109"/>
+        <location filename="../../src/nodeeditor/nodes/script/javascript.cpp" line="31"/>
         <source>Java Script</source>
         <translation></translation>
     </message>
@@ -658,7 +633,7 @@
 <context>
     <name>JavaScriptThread</name>
     <message>
-        <location filename="../../src/nodeeditor/nodes/script/javascript.cpp" line="81"/>
+        <location filename="../../src/nodeeditor/nodes/script/javascriptthread.cpp" line="77"/>
         <source>The script is invalid.</source>
         <translation>非法脚本。</translation>
     </message>
@@ -955,7 +930,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 <context>
     <name>LuaScript</name>
     <message>
-        <location filename="../../src/nodeeditor/nodes/script/luascript.cpp" line="129"/>
+        <location filename="../../src/nodeeditor/nodes/script/luascript.cpp" line="33"/>
         <source>Lua Script</source>
         <translation>Lua脚本</translation>
     </message>
@@ -980,34 +955,33 @@ li.checked::marker { content: &quot;\2612&quot;; }
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="279"/>
+        <location filename="../../src/mainwindow.cpp" line="281"/>
         <source>&amp;File</source>
         <translation>文件(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="280"/>
+        <location filename="../../src/mainwindow.cpp" line="282"/>
         <source>&amp;New</source>
         <translation>新建(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="286"/>
+        <location filename="../../src/mainwindow.cpp" line="288"/>
         <source>&amp;Open</source>
         <translation>打开(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="296"/>
+        <location filename="../../src/mainwindow.cpp" line="298"/>
         <source>&amp;Save</source>
         <translation>保存(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="306"/>
+        <location filename="../../src/mainwindow.cpp" line="308"/>
         <source>Save As</source>
         <translation>另存为</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="319"/>
         <source>Preference</source>
-        <translation>偏好设置</translation>
+        <translation type="vanished">偏好设置</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="321"/>
@@ -1025,12 +999,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>清空最近项目</translation>
     </message>
     <message>
+        <location filename="../../src/mainwindow.cpp" line="366"/>
         <source>&amp;Options</source>
-        <translation type="vanished">选项(&amp;O)</translation>
+        <translation>选项(&amp;O)</translation>
     </message>
     <message>
+        <location filename="../../src/mainwindow.cpp" line="505"/>
         <source>Use System Proxy</source>
-        <translation type="vanished">使用系统网络代理</translation>
+        <translation>使用系统网络代理</translation>
     </message>
     <message>
         <source>Application Themes</source>
@@ -1062,235 +1038,290 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>编辑(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="366"/>
+        <location filename="../../src/mainwindow.cpp" line="389"/>
+        <source>High DPI policy</source>
+        <translation>适配策略</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="413"/>
+        <source>Settings</source>
+        <translation>配置目录</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="414"/>
+        <source>Open Settings Path</source>
+        <translation>打开配置目录</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="418"/>
+        <source>Clear Settings on Next Booting</source>
+        <translation>下次启动时清空配置</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="427"/>
+        <source>Themes</source>
+        <translation>应用主题</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="453"/>
+        <source>Plugins</source>
+        <translation>插件配置</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="454"/>
+        <source>Open Plugins Directory</source>
+        <translation>打开插件目录</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="458"/>
+        <source>Set Plugins Path</source>
+        <translation>设置插件目录</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="460"/>
+        <source>Select Plugins Path</source>
+        <translation>选择插件目录</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="467"/>
+        <source>Reset Plugins Path</source>
+        <translation>重置插件目录</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="483"/>
+        <source>Languages</source>
+        <translation>语言设置</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="520"/>
         <source>&amp;View</source>
         <translation>视图(&amp;V)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="383"/>
+        <location filename="../../src/mainwindow.cpp" line="537"/>
         <source>Show Ruler</source>
         <translation>显示标尺</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="394"/>
+        <location filename="../../src/mainwindow.cpp" line="548"/>
         <source>Show Vernier</source>
         <translation>显示游标</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="406"/>
+        <location filename="../../src/mainwindow.cpp" line="560"/>
         <source>Show Grid</source>
         <translation>显示网格</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="422"/>
+        <location filename="../../src/mainwindow.cpp" line="576"/>
         <source>&amp;Help</source>
         <translation>帮助(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="423"/>
+        <location filename="../../src/mainwindow.cpp" line="577"/>
         <source>About Qt</source>
         <translation>关于Qt</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="425"/>
-        <location filename="../../src/mainwindow.cpp" line="729"/>
+        <location filename="../../src/mainwindow.cpp" line="579"/>
+        <location filename="../../src/mainwindow.cpp" line="883"/>
         <source>About</source>
         <translation>关于</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="430"/>
+        <location filename="../../src/mainwindow.cpp" line="584"/>
         <source>Screenshot</source>
         <translation>截图</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="439"/>
+        <location filename="../../src/mainwindow.cpp" line="593"/>
         <source>Buy from Store</source>
         <translation>购买软件</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="451"/>
+        <location filename="../../src/mainwindow.cpp" line="605"/>
         <source>Online Manual</source>
         <translation>在线手册</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="454"/>
+        <location filename="../../src/mainwindow.cpp" line="608"/>
         <source>Plugin Developing</source>
         <translation>插件开发</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="470"/>
+        <location filename="../../src/mainwindow.cpp" line="624"/>
         <source>Register</source>
         <translation>软件注册</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="477"/>
+        <location filename="../../src/mainwindow.cpp" line="631"/>
         <source>Third Party Open Source</source>
         <translation>第三方开源</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="493"/>
+        <location filename="../../src/mainwindow.cpp" line="647"/>
         <source>File Tool Bar</source>
         <translation>文件工具栏</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="503"/>
+        <location filename="../../src/mainwindow.cpp" line="657"/>
         <source>View Tool Bar</source>
         <translation>视图工具栏</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="506"/>
+        <location filename="../../src/mainwindow.cpp" line="660"/>
         <source>Reset Scale</source>
         <translation>重置缩放</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="511"/>
+        <location filename="../../src/mainwindow.cpp" line="665"/>
         <source>Zoom Out</source>
         <translation>缩小</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="518"/>
+        <location filename="../../src/mainwindow.cpp" line="672"/>
         <source>Zoom In</source>
         <translation>放大</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="552"/>
+        <location filename="../../src/mainwindow.cpp" line="706"/>
         <source>Edit Tool Bar</source>
         <translation>编辑工具栏</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="565"/>
+        <location filename="../../src/mainwindow.cpp" line="719"/>
         <source>Align to Top</source>
         <translation>顶部对齐</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="566"/>
+        <location filename="../../src/mainwindow.cpp" line="720"/>
         <source>Align to Bottom</source>
         <translation>底部对齐</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="567"/>
+        <location filename="../../src/mainwindow.cpp" line="721"/>
         <source>Align to Left</source>
         <translation>左侧对齐</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="568"/>
+        <location filename="../../src/mainwindow.cpp" line="722"/>
         <source>Align to Right</source>
         <translation>右侧对齐</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="569"/>
+        <location filename="../../src/mainwindow.cpp" line="723"/>
         <source>Align to Vertical Center</source>
         <translation>垂直居中</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="570"/>
+        <location filename="../../src/mainwindow.cpp" line="724"/>
         <source>Align to Horizontal Center</source>
         <translation>水平居中</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="571"/>
-        <location filename="../../src/mainwindow.cpp" line="572"/>
+        <location filename="../../src/mainwindow.cpp" line="725"/>
+        <location filename="../../src/mainwindow.cpp" line="726"/>
         <source>Align Justify Space Even</source>
         <translation>水平等分</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="586"/>
+        <location filename="../../src/mainwindow.cpp" line="740"/>
         <source>Select All Nodes</source>
         <translation>选择所有节点</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="596"/>
+        <location filename="../../src/mainwindow.cpp" line="750"/>
         <source>Delete Selected Nodes</source>
         <translation>删除先择的节点</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="602"/>
+        <location filename="../../src/mainwindow.cpp" line="756"/>
         <source>Delete All Selected Nodes</source>
         <translation>删除所有选择的节点</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="603"/>
+        <location filename="../../src/mainwindow.cpp" line="757"/>
         <source>All selected nodes will be delete, are you sure?</source>
         <translation>所有选中的将会被删除，是否执行？</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="611"/>
-        <location filename="../../src/mainwindow.cpp" line="616"/>
+        <location filename="../../src/mainwindow.cpp" line="765"/>
+        <location filename="../../src/mainwindow.cpp" line="770"/>
         <source>Clear All Nodes</source>
         <translation>清空所有节点</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="617"/>
+        <location filename="../../src/mainwindow.cpp" line="771"/>
         <source>All nodes will be delete, are you sure?</source>
         <translation>所有节点将会被清楚，是否执行？</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="628"/>
+        <location filename="../../src/mainwindow.cpp" line="782"/>
         <source>New Project</source>
         <translation>新建项目</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="630"/>
+        <location filename="../../src/mainwindow.cpp" line="784"/>
         <source>Project (*.flow)</source>
         <translation>项目文件(*.flow)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="645"/>
+        <location filename="../../src/mainwindow.cpp" line="799"/>
         <source>Open Flow Scene</source>
         <translation>打开项目</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="647"/>
+        <location filename="../../src/mainwindow.cpp" line="801"/>
         <source>Flow Scene Files (*.flow)</source>
         <translation>项目文件(*.flow)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="674"/>
+        <location filename="../../src/mainwindow.cpp" line="828"/>
         <source>Save Project</source>
         <translation>保存项目</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="676"/>
+        <location filename="../../src/mainwindow.cpp" line="830"/>
         <source>Project (*.flow);;All file (*.*)</source>
         <translation>项目文件(*.flow);;所有文件(*.*)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="717"/>
+        <location filename="../../src/mainwindow.cpp" line="871"/>
         <source>Unknown</source>
         <translation>未知</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="723"/>
+        <location filename="../../src/mainwindow.cpp" line="877"/>
         <source>Commit hash</source>
         <translation>提交指纹</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="725"/>
+        <location filename="../../src/mainwindow.cpp" line="879"/>
         <source>Commit time</source>
         <translation>提交时间</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="726"/>
+        <location filename="../../src/mainwindow.cpp" line="880"/>
         <source>Build Date</source>
         <translation>构建日期</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="727"/>
+        <location filename="../../src/mainwindow.cpp" line="881"/>
         <source>Copyright</source>
         <translation>版权声明</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="728"/>
+        <location filename="../../src/mainwindow.cpp" line="882"/>
         <source>All rights reserved.</source>
         <translation>保留所有版权。</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="890"/>
+        <location filename="../../src/mainwindow.cpp" line="1044"/>
         <source>Trial Edition Limitation</source>
         <translation>试用版限制</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="891"/>
+        <location filename="../../src/mainwindow.cpp" line="1045"/>
         <source>This is a trial edition, please register to use all features.</source>
         <translation>这是一个试用版本，请注册软件以获得完整功能。</translation>
     </message>
@@ -1303,8 +1334,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">该操作需要重启软件才能生效，立即重启软件？</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="958"/>
-        <location filename="../../src/mainwindow.cpp" line="967"/>
+        <location filename="../../src/mainwindow.cpp" line="1098"/>
+        <location filename="../../src/mainwindow.cpp" line="1107"/>
         <source>Trial Edition</source>
         <translation>试用版</translation>
     </message>
@@ -1442,84 +1473,68 @@ li.checked::marker { content: &quot;\2612&quot;; }
 <context>
     <name>Preference</name>
     <message>
-        <location filename="../../src/preference/preference.ui" line="14"/>
         <source>Preference</source>
-        <translation>偏好设置</translation>
+        <translation type="vanished">偏好设置</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.ui" line="27"/>
         <source>General</source>
-        <translation>通用设置</translation>
+        <translation type="vanished">通用设置</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.ui" line="46"/>
         <source>Application language</source>
-        <translation>软件语言</translation>
+        <translation type="vanished">软件语言</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.ui" line="69"/>
         <source>High DPI policy</source>
-        <translation>适配策略</translation>
+        <translation type="vanished">适配策略</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.ui" line="89"/>
         <source>Application theme</source>
-        <translation>软件主题</translation>
+        <translation type="vanished">软件主题</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.ui" line="96"/>
         <source>Network proxy</source>
-        <translation>网络代理</translation>
+        <translation type="vanished">网络代理</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.ui" line="103"/>
         <source>Use System Proxy</source>
-        <translation>使用系统网络代理</translation>
+        <translation type="vanished">使用系统网络代理</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.ui" line="111"/>
         <source>Settings</source>
-        <translation>配置目录</translation>
+        <translation type="vanished">配置目录</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.ui" line="117"/>
         <source>Open Settings Path</source>
-        <translation>打开配置目录</translation>
+        <translation type="vanished">打开配置目录</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.ui" line="150"/>
         <source>Clear Settings on Next Booting</source>
-        <translation>下次启动时清空配置</translation>
+        <translation type="vanished">下次启动时清空配置</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.ui" line="158"/>
         <source>Plugins</source>
-        <translation>插件配置</translation>
+        <translation type="vanished">插件配置</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.ui" line="174"/>
         <source>Reset</source>
-        <translation>重置路径</translation>
+        <translation type="vanished">重置路径</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.ui" line="201"/>
         <source>Plugins path</source>
-        <translation>插件加载路劲</translation>
+        <translation type="vanished">插件加载路劲</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.ui" line="181"/>
         <source>Browse</source>
-        <translation>浏览文件</translation>
+        <translation type="vanished">浏览文件</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.ui" line="208"/>
         <source>The settings need to reboot application to effectived.</source>
-        <translation>更改插件加载路径需要重启软件才能生效。</translation>
+        <translation type="vanished">更改插件加载路径需要重启软件才能生效。</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.ui" line="234"/>
         <source>Close</source>
-        <translation>关闭</translation>
+        <translation type="vanished">关闭</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -1530,9 +1545,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">应用</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.cpp" line="183"/>
         <source>Select Plugins Path</source>
-        <translation>选择插件目录</translation>
+        <translation type="vanished">选择插件目录</translation>
     </message>
 </context>
 <context>
@@ -1671,32 +1685,32 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>未知</translation>
     </message>
     <message>
-        <location filename="../../src/main.cpp" line="49"/>
+        <location filename="../../src/main.cpp" line="53"/>
         <source>Application is booting...</source>
         <translation>软件正在启动...</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.cpp" line="81"/>
+        <location filename="../../src/mainwindow.cpp" line="382"/>
         <source>Round up for .5 and above</source>
         <translation>缩放为x.5倍</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.cpp" line="82"/>
+        <location filename="../../src/mainwindow.cpp" line="383"/>
         <source>Always round up</source>
         <translation>总是放大</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.cpp" line="83"/>
+        <location filename="../../src/mainwindow.cpp" line="384"/>
         <source>Always round down</source>
         <translation>总是缩小</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.cpp" line="84"/>
+        <location filename="../../src/mainwindow.cpp" line="385"/>
         <source>Round up for .75 and above</source>
         <translation>缩放为x.75倍</translation>
     </message>
     <message>
-        <location filename="../../src/preference/preference.cpp" line="85"/>
+        <location filename="../../src/mainwindow.cpp" line="386"/>
         <source>Don&apos;t round</source>
         <translation>不缩放</translation>
     </message>
