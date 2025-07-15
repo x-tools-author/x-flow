@@ -181,7 +181,7 @@ void setupLanguage(const QString &qmFile)
     }
 
     if (!qApp->installTranslator(translator)) {
-        qWarning() << "The language has been setup, English will be used.";
+        qWarning() << "The language setup failed, English will be used.";
     } else {
         qInfo() << "The language has been setup, current language file is:" << qmFile;
     }
