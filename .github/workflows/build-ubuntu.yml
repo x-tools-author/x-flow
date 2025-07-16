@@ -15,7 +15,6 @@ jobs:
       matrix:
         os: [ubuntu-22.04]
         version: [6.8.3, 6.9.1]
-        arch: gcc_64
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -25,7 +24,7 @@ jobs:
           aqtversion: '==3.1.*'
           version: ${{ matrix.version }}
           target: 'desktop'
-          arch: ${{ matrix.arch }}
+          arch: gcc_64
           dir: ${{ github.workspace }}
           modules: 'qtcharts qtserialbus qtserialport qtwebsockets'
       - name: install-dependencies
@@ -38,5 +37,5 @@ jobs:
           mkdir build
           cd build
           cmake -DCMAKE_PREFIX_PATH='${{ github.workspace }}/Qt/${{ matrix.version }}/${{ matrix.arch }}' -DCMAKE_BUILD_TYPE=Release -G "Unix Makefiles" ../
-          cmake --build . --target xTools
-          cmake --build . --target xTools_linux
+          cmake --build . --target xFlow
+          cmake --build . --target xFlow_linux
