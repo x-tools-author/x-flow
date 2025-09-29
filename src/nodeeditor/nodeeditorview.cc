@@ -36,7 +36,7 @@
 NodeEditorView::NodeEditorView(const QColor &rulerColor, QWidget *parent)
     : QtNodes::GraphicsView{parent}
 {
-#if 0
+#if 1
     setViewport(new QOpenGLWidget);
 #endif
     m_registry = std::make_shared<NodeEditorRegistry>();

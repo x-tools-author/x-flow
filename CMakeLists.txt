@@ -27,6 +27,7 @@ set(QT_PACKAGES
     Svg
     Qml
     OpenGL
+    OpenGLWidgets
     LinguistTools)
 find_package(Qt NAMES Qt6 REQUIRED COMPONENTS ${QT_PACKAGES})
 find_package(Qt6 REQUIRED COMPONENTS ${QT_PACKAGES})
@@ -150,6 +151,7 @@ target_link_libraries(
           Qt6::WebSockets
           Qt6::Qml
           Qt6::OpenGL
+          Qt6::OpenGLWidgets
           ${libqlementine}
           lua
           QtNodes::QtNodes
