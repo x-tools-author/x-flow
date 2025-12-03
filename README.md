@@ -6,6 +6,9 @@
 [![build-daily](https://github.com/x-tools-author/x-flow/actions/workflows/build-daily.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-daily.yml)
 [![build-pages](https://github.com/x-tools-author/x-flow/actions/workflows/build-pages.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-pages.yml)
 
+> NOTR
+> This repository was archived by. It is now read-only. It will be maintained in *[xTools]<https://github.com/x-tools-author/x-tools>* project.
+
 xFlow(Data Flow Studio) is a configurable and extensible communication data transfer tool, currently supports serial port, UDP, TCP, Web Socket data transfer.
 
 > **You can get *xFlow* form [Micorsoft Store(sponsor)](https://apps.microsoft.com/detail/9pjk7d83p014)** or from [Github Release(community)](https://github.com/x-tools-author/x-flow/releases).
