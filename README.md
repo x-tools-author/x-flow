@@ -6,7 +6,7 @@
 [![build-daily](https://github.com/x-tools-author/x-flow/actions/workflows/build-daily.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-daily.yml)
 [![build-pages](https://github.com/x-tools-author/x-flow/actions/workflows/build-pages.yml/badge.svg)](https://github.com/x-tools-author/x-flow/actions/workflows/build-pages.yml)
 
-> NOTE
+> [!NOTE]
 > This repository was archived by. It is now read-only. It will be maintained in *[xTools](https://github.com/x-tools-author/x-tools)* project.
 
 xFlow(Data Flow Studio) is a configurable and extensible communication data transfer tool, currently supports serial port, UDP, TCP, Web Socket data transfer.
